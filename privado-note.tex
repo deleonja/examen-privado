@@ -1,0 +1,189 @@
+\documentclass[11pt,dvipsnames]{report} % {{{
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{authblk} % para la manipulación de autores y afiliación
+\usepackage[pdftex]{hyperref}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{bbold}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{dsfont}
+
+% Theorems, proofs, etc
+\usepackage{amsthm}
+
+\definecolor{mycolor}{RGB}{255,50,0}
+
+\usepackage{fancybox}
+\usepackage{colortbl}
+\usepackage{amsbsy}
+\usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
+\FXRegisterAuthor{cp}{acp}{\color{blue}CP}
+\FXRegisterAuthor{ja}{aja}{\color{mycolor}JA}
+\FXRegisterAuthor{cc}{acc}{\color{Purple}CC}
+
+
+\usepackage[]{lineno}  \linenumbers
+\setlength\linenumbersep{3pt}
+
+\newcommand{\fref}[1]{fig.~\ref{#1}}  \newcommand{\tref}[1]{table~\ref{#1}}
+\newcommand{\Fref}[1]{Fig.~\ref{#1}}  \newcommand{\Tref}[1]{Table~\ref{#1}}
+
+%\usepackage{hyperref}
+%\usepackage{commath}
+\decimalpoint
+\renewcommand{\tablename}{Tabla}
+\oddsidemargin 0in
+\textwidth 6.5in
+\topmargin -0.5in
+\textheight 8.5in
+
+\newcommand{\psii}{\psi_i}
+\newcommand{\Pk}[1]{\ket{\psi_{#1} }}
+\newcommand{\Pb}[1]{\bra{\psi_{#1} }}
+\newcommand{\pk}{\ket{\psi}}
+\newcommand{\M}{\mathcal{M}^{(N)}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\Erho}{\mathcal{E}(\rho)}
+\newcommand{\1}{\mathds{1}}
+\newcommand{\ten}{\otimes}
+\newcommand{\h}[1]{\colorbox{Yellow}{#1}}
+\newcommand{\hi}{\mathcal{H}}
+\newcommand{\txt}[1]{\text{#1}}
+\newcommand{\here}{\h{\hspace{15cm}} }
+\newcommand{\rhoi}{\dyad{\psii}{\psii}}
+\newcommand{\ind}[2]{{{}^{#1}_{#2}}}
+
+\def\dbar{{\mathchar'26\mkern-12mu d}}
+
+
+% Para que funcione mejor la numeración {{{
+% https://tex.stackexchange.com/questions/43648/why-doesnt-lineno-number-a-paragraph-when-it-is-followed-by-an-align-equation
+\newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+  \renewenvironment{#1}%
+     {\linenomath\csname old#1\endcsname}%
+     {\csname oldend#1\endcsname\endlinenomath}}% 
+\newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+  \patchAmsMathEnvironmentForLineno{#1}%
+  \patchAmsMathEnvironmentForLineno{#1*}}%
+\AtBeginDocument{%
+\patchBothAmsMathEnvironmentsForLineno{equation}%
+\patchBothAmsMathEnvironmentsForLineno{align}%
+\patchBothAmsMathEnvironmentsForLineno{flalign}%
+\patchBothAmsMathEnvironmentsForLineno{alignat}%
+\patchBothAmsMathEnvironmentsForLineno{gather}%
+\patchBothAmsMathEnvironmentsForLineno{multline}%
+}
+% }}}
+
+
+% }}}
+\begin{document}
+% Titulo, abstract y esas vainas {{{
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1                                  
+\newcommand{\HRule}{\rule{\linewidth}{0.6mm}} % Defines a new command for horizontal lines, change thickness here                             
+
+\center % Centre everything on the page                                                                                                       
+
+%------------------------------------------------                                                                                             
+%       Title                                                                                                                                 
+%------------------------------------------------                                                                                             
+
+\HRule\\[0.4cm]
+
+% Title of your document                                                 
+{\LARGE\bfseries Mapeos proyectivos en sistemas de varios qubits}\\[0.4cm] 
+
+\HRule\\[2cm]
+
+%------------------------------------------------                                                                                             
+%       Author(s)                                                                                                                             
+%------------------------------------------------                                                                                             
+
+
+\Large{\textbf{José Alfredo de León Garrido}}\\[2cm]
+
+%------------------------------------------------                                                                                             
+%       Headings                                                                                                                              
+%------------------------------------------------                                                                                             
+
+\textsc{\Large Universidad de San Carlos de Guatemala\\
+		Escuela de Ciencias Físicas y Matemáticas\\
+		Licenciatura en Física}\\[2cm]
+
+\textsc{{\Large\bfseries Informe final}}\\
+\textsc{\large Año de prácticas}\\[2cm]
+
+\textsc{\large Supervisado por:\\
+		\textbf{Dr. Carlos Pineda (IF-UNAM) y\\
+		M.Sc. Juan Diego Chang (ICFM-USAC)}}
+
+
+%------------------------------------------------                                                                                             
+%       Date                                                                                                                                  
+%------------------------------------------------                                                                                             
+\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+\vfill\vfill\vfill
+
+{\large xx de noviembre, 2020} % Date, change the \today to a set date if you want to be precise                                                              
+
+%------------------------------------------------                                                                                             
+%       Logo                                                                                                                                  
+%------------------------------------------------                                                                                             
+
+%\vfill\vfill                                                                                                                                 
+%\includegraphics[width=0.2\textwidth]{placeholder.jpg}\\[1cm] % Include a department/university logo                                                                                                                                      
+
+%----------------------------------------------------------------------------------------                                                     
+
+\vfill % Push the date up 1/4 of the remaining page  
+\end{titlepage}
+
+\newtheorem{definition}{Definición}[section]
+
+\newtheorem{teorema}{Teorema}[section]
+
+\newtheorem{property}{Propiedad}[section]
+% }}}
+
+\chapter{Termodinámica}
+\section{Trabajo}
+\begin{enumerate}
+\item Durante un proceso cuasiestático un sistema atraviesa en todo momento 
+	  estados infinitesimalmente cercanos al equilibrio termodinámico y, 
+	  por consiguiente, la dinámica de los estados puede ser descrita
+	  en términos de coordenadas termodinámicas $\Rightarrow$ existe 
+	  una ecuación de estado que describe estos estados 
+\item Equilibrio termodinámico: eq. mecánico $+$ eq. térmico $+$ 
+ 	  eq. químico
+\item Diferencial de trabajo de un sistema de un gas en un pistón:
+\begin{equation}
+\dbar W= PAdx = -PdV,
+\end{equation}
+el signo negativo asegura que en una compresión $(dV<0)$ $\dbar W>0$ 
+(trabajo sobre el sistema, i.e. el sistema gana energía). 
+\item El trabajo realizado sobre un sistema hidrostático depende de 
+la trayectoria que se siga en el diagrama de estados (a diferencia
+del trabajo realizado por la fuerza gravitacional, por ej). 
+\end{enumerate}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{references}
+\end{document}
+
+
