@@ -1,0 +1,214 @@
+\chapter{Termodinámica}
+\section{Trabajo}
+\begin{enumerate}
+\item Durante un \textbf{proceso cuasiestático} un sistema atraviesa 
+		en todo momento 
+	  estados infinitesimalmente cercanos al equilibrio termodinámico y, 
+	  por consiguiente, la dinámica de los estados puede ser descrita
+	  en términos de coordenadas termodinámicas $\Rightarrow$ existe 
+	  una ecuación de estado que describe estos estados 
+\item Equilibrio termodinámico: eq. mecánico $+$ eq. térmico $+$ 
+ 	  eq. químico
+\item Diferencial de trabajo de un sistema de un gas en un pistón:
+\begin{equation}
+\dbar W= PAdx = -PdV,
+\end{equation}
+el signo negativo asegura que en una compresión $(dV<0)$ $\dbar W>0$ 
+(trabajo sobre el sistema, i.e. el sistema gana energía). 
+\item El trabajo realizado sobre un sistema hidrostático depende de 
+la trayectoria que se siga en el diagrama de estados (a diferencia
+del trabajo realizado por la fuerza gravitacional, por ej). 
+\item El trabajo relizado sobre un gas, definido por
+\begin{align*}
+W=-\int_{V_i}^{V_f} PdV, 
+\end{align*}
+se puede integrar siempre y cuando se conozca una función 
+de estado.
+\item ¡¡¡Calor $=$ energía!!!
+\end{enumerate}
+
+\section{1era ley de la Termodinámica}
+\begin{itemize}
+\item Una forma \textbf{restringida} de enunciar la primera ley 
+de la termodinámica es:
+
+Si un sistema cerrado es causado a cambiar de estado de un estado 
+inicial a un estado final únicamente por procesos adiabáticos, entonces
+el trabajo realizado sobre el sistema es el mismo para todas las trayectorias
+adiabáticas que conectan a ambos estados. 
+
+Es restringida porque no se está diciendo qué ocurre en 
+aquellos procesos no adiabáticos. Es decir, en procesos
+en los que ocurre intercambio de calor. 
+\item Se sigue de esta forma restringida de la primera ley de la 
+Termodinámica que existe una función que depende únicamente
+de las coordenadas termodinámicas cuya diferencia entre el valor
+final e inicial es igual al trabajo adiabático que se realiza al
+sistema pasar del estado inicial al estado final. Esta función 
+es la función de \textbf{energía interna} $U$: 
+\begin{align}
+W_{i\to f}\text{(adiabático)}=U_f-U_i,
+\end{align}
+esta diferencia da el aumento en energía interna del sistema. 
+\item  \textbf{1era. ley de la Termodinámica} (formulación 
+matemática): 
+Cuando un sistema cerrado y su entorno se encuentran a distintas
+temperatura y se realiza trabajo diatérmico [?] sobre el sistema,
+entonces la energía transferida por otros procesos no mecánicos, 
+igual a la diferencia entre el cambio de energía interna y el 
+trabajo diatérmano se llama calor $Q$:
+\begin{align}
+  \Delta U = Q + W,
+  \label{eq:1st-law-thermodynamics}
+\end{align}
+donde $Q>0$ cuando el calor entra al sistema y $Q<0$ cundo
+abandona el sistema. Tres ideas están plasmadas en 
+\eqref{eq:1st-law-thermodynamics}: (1) la existencia de una 
+función de energía interna, (2) el principio de conservación de 
+la energía, y (3) la definición de trabajo como energía en tránsito
+en virtud de una diferencia de temperatura.
+\item \textbf{Forma diferencial de la 1era. ley de la Termodinámica}:
+para un sistema termodinámico que atraviesa cambios infinitesimales 
+en sus variables termodinámicas la primera ley se formula como
+\begin{align}
+  dU = \dbar Q + \dbar W.
+  \label{eq:1st-law-thermodynamics_diffForm}
+\end{align}
+\item \textbf{Capacidad calorífica}: 
+\begin{align}
+  C=\dv{Q}{T} \qty[\frac{K}{J}]
+  \label{eq:heat-capacity}.
+\end{align}
+\item El caso de un gas:
+
+La ecuación \eqref{eq:1st-law-thermodynamics_diffForm} toma 
+la forma 
+\begin{align}
+   dU =\dbar Q-PdV,
+   \label{eq:1st-law-gas}
+ \end{align} 
+donde $U$ es una función de algún par $P,V,T$ (la ecuación relaciona 
+a un par con la tercera). Tomando $U=U(T,V)$ se tiene 
+\begin{align*}
+dU=\qty(\pdv{U}{T	})_VdT+\qty(\pdv{U}{V})_TdV,
+\end{align*}
+y sustityendo en \eqref{eq:1st-law-gas}
+\begin{align*}
+\dbar Q &=\qty(\pdv{U}{T	})_VdT+\qty[\qty(\pdv{U}{V})_T+P]dV\\
+\dv{Q}{T} &= \qty(\pdv{U}{T	})_V
++\qty[\qty(\pdv{U}{V})_T+P]\dv{V}{T}.
+\end{align*}
+\item Flujo cuasiestático de calor: cuando a lo largo de un sistema 
+existe un gradiente de temperatura y el calor fluye de manera
+cuasiestática (misma definición) podemos calcular el 
+calor que se absorbe durante el proceso utilizando la ecuación 
+\eqref{eq:heat-capacity} de la capacidad calorífica.
+\item El transporte de energía en un sistema entre elementos
+de volumen vecinos en virtud de una diferencia de temperatura se 
+conoce como conducción de calor. Los experimentos muestran que 
+\begin{align*}
+\frac{Q}{t}\propto A\frac{\Delta T}{\Delta x},
+\end{align*}
+con $A$ el área transversal al flujo de calor. Por consiguiente
+\begin{align}
+\dv{Q}{t	} = -KA\dv{T}{x},
+\end{align}
+con $K$ la conductividad térmica. El signo menos es para asegurar
+que la dirección del flujo de calor sea en la dirección positiva de $x$.
+\item \textbf{Radiación térmica}: radiación en virtud de su temperatura.
+\item Exitancia radiante $\mathcal{R}$: potencia irradiada total por 
+unidad de área. Emisividad total $\epsilon$: fracción de la potencia
+irradiada total que es emitida como radiación térmica.
+\item \textbf{Ley de Stefan-Boltzmann}: un cuerpo negro es una
+sustancia ideal que es capaz de absorber toda la luz incidente 
+sobre ella y reemitirla netamente como radiación térmica. La
+radiación de un cuerpo como este está dada por la la siguiente ley:
+\begin{align}
+  \mathcal{R}=\mathcal{R}(T)=\sigma T^4,
+  \label{eq:stefan-boltzmann}
+\end{align}
+donde $\sigma$ es la constante de Stefan-Boltzmann.
+\end{itemize}
+
+\section{Gas ideal}
+\begin{enumerate}
+\item \textbf{Expansión libre adiabática}: gas en expansión en el 
+cual no se hace trabajo ni se transfiere calor $\Rightarrow$ $\Delta U=0$
+durante la expansión libre.
+\item Al escribir explícitamente $dU$ asumiendo que $U=U(T,V)$ ó 
+$U=U(T,P)$ y al considerar una expansión libre adiabática $(dU=0)$
+se concluye que $U=U(T)$ para un gas ideal. 
+\item Un \textbf{gas ideal} satisface
+\begin{align}
+  PV&=nRT, & \qty(\pdv{U}{P})_T&=0,
+  \label{eq:ideal-gas}
+\end{align}
+la primera condición es la ecuación de estado del gas ideal y 
+la segunda es para asegurar que en una expansión libre
+$dU=0$.
+\item Retomando la ecuación \eqref{eq:1st-law-gas}:
+\begin{align*}
+\dbar Q=dU+PdV,
+\end{align*}
+cuando $dV=0$
+\begin{align*}
+\qty(\dv{Q}{T})_T=C_V=\qty(\pdv{U}{T})_V.
+\end{align*}
+En el caso del gas ideal $U=U(T)$, por consiguiente
+\begin{align*}
+C_V=\dv{U}{T},
+\end{align*}
+y 
+\begin{align*}
+\dbar Q = C_VdT+PdV,
+\end{align*}
+y sacando un diferencial de la ecuación de estado del gas ideal
+\begin{align*}
+PdV+VdP=nRdT.
+\end{align*}
+Sustiyendo arriba
+\begin{align*}
+\dbar Q &= C_VdT + nRdT - VdP\\
+\dv{Q}{T}&=\qty(C_V+nR)-V\dv{P}{T},
+\end{align*}
+cuando $dP=0$:
+\begin{align}
+  \qty(\dv{Q}{T})_P=C_P=C_V+nR.
+  \label{eq:C_P-idealGas}
+\end{align}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
