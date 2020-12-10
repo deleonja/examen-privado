@@ -1,0 +1,9 @@
+Termodinámica
+Libro: Heat and Thermodynamics, Zemansky & Dittman, 7th Ed.
+Problemas: 
+
+3.2, 3.5
+4.10*, 
+5.7*, 5.9
+
+total = 5

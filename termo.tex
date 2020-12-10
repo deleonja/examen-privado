@@ -159,9 +159,10 @@ En el caso del gas ideal $U=U(T)$, por consiguiente
 C_V=\dv{U}{T},
 \end{align*}
 y 
-\begin{align*}
+\begin{align}
 \dbar Q = C_VdT+PdV,
-\end{align*}
+\label{eq:dQ-idealGas}
+\end{align}
 y sacando un diferencial de la ecuación de estado del gas ideal
 \begin{align*}
 PdV+VdP=nRdT.
@@ -173,11 +174,90 @@ Sustiyendo arriba
 \end{align*}
 cuando $dP=0$:
 \begin{align}
-  \qty(\dv{Q}{T})_P=C_P=C_V+nR.
-  \label{eq:C_P-idealGas}
+\qty(\dv{Q}{T})_P=C_P=C_V+nR.
+\label{eq:C_P-idealGas}
 \end{align}
+\item \textbf{Procesos adiabáticos del gas ideal:} partimos
+de las ecuaciones \eqref{eq:dQ-idealGas} y \eqref{eq:C_P-idealGas}
+y consideramos un proceso adiabático $(\dbar Q=0)$,
+\begin{align*}
+0&=C_VdT+PdV, & 0&=C_PdT-VdP\\
+C_VdT&=-PdV, & C_PdT&=VdP,
+\end{align*}
+dividiendo la ecuación de la derecha entre la de la izquierda
+\begin{align}
+\frac{C_P}{C_V}&=\gamma=-\frac{V}{P}\dv{P}{V}\nonumber\\
+\gamma \frac{dV}{V}&=-\frac{dP}{P} \nonumber\\
+\gamma\ln V&=\ln P+C_1\nonumber\\
+V^{\gamma}&=PC_2 \nonumber\\
+PV^{-\gamma}&=C_3,
+\label{eq:StEq-IdealGas-Adiabatic}
+\end{align}
+(no hay que ponerle tanto amor a las constantes). Esta  
+ecuación es válida para el gas ideal para procesos adiabáticos.
 \end{enumerate}
 
+\section{La 2da. ley de la Termodinámica}
+Notación:
+\begin{itemize}
+\item $\abs{Q_H}$: calor intercambiado entre un baño de
+alta temperatura y el sistema
+\item $\abs{Q_L}$: calor intercambiado entre un baño de 
+baja temperatura y el sistema
+\item $\abs{W}$: el trabajo intercambiado entre el sistema
+y su entorno
+\end{itemize}
+
+\begin{itemize}
+\item Si $\QH>\QL$ y si $\W$ es realizado por el sistema, 
+entonces la máquina que causa que el sistema atraviese
+un ciclo se conoce como motor de calor.
+\item \textbf{Eficiencia térmica:} 
+\begin{align}
+\eta=\frac{\W}{\QH}
+\label{•}
+\end{align}
+pero como no hay cambio en la energía interna porque 
+el sistema se encuentra en contacto con una reserva de
+energía (infinita, de manera idealizada), entonces
+\begin{align}
+\eta=\frac{\QH-\QL}{\QH}
+\label{eq:thermal-eff	}	
+\end{align}
+\item La transformación de calor en trabajo se consigue 
+por dos tipos de motores: los motores de combustión
+interna y los motores de combustión externa. La 
+transformación ocurre haciendo que un gas atraviese
+un ciclo.
+\item Motores de combustión interna: motor de gasolina
+y diesel.
+\item Motores de combustión externa: motor de vapor
+y de Stirling.
+\item En la \Fref{fig:otto-cycle} se muestra un ciclo de Otto ideal
+para un motor de gasolina.
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/otto-cycle.png}
+  \caption{Ciclo de Otto para un motor de gasolina.}
+  \label{fig:otto-cycle}
+\end{figure}
+\item En la \Fref{fig:diesel-cycle} se muestra un ciclo Diesel ideal.
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/otto-cycle.png}
+  \caption{Ciclo de Diesel ideal.}
+  \label{fig:diesel-cycle}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/stirling-cycle.png}
+  \caption{Ciclo de Stirling ideal. Nótese que el intercambio 
+  de calor entre el sistema y su entorno ocurre sobre curvas
+  isotérmicas.}
+  \label{fig:diesel-cycle}
+\end{figure}
+\end{itemize}
 
 
 
