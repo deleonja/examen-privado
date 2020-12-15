@@ -5,5 +5,8 @@ Problemas:
 3.2, 3.5
 4.10*, 
 5.7*, 5.9
+6..3*
 
 total = 5
+
+*probablemente me atoré y aún no los acabo

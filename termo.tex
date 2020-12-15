@@ -188,9 +188,9 @@ dividiendo la ecuación de la derecha entre la de la izquierda
 \begin{align}
 \frac{C_P}{C_V}&=\gamma=-\frac{V}{P}\dv{P}{V}\nonumber\\
 \gamma \frac{dV}{V}&=-\frac{dP}{P} \nonumber\\
-\gamma\ln V&=\ln P+C_1\nonumber\\
-V^{\gamma}&=PC_2 \nonumber\\
-PV^{-\gamma}&=C_3,
+\gamma\ln V&=-\ln P+C\nonumber\\
+V^{\gamma}&=P^{-1}K \nonumber\\
+PV^{\gamma}&=K,
 \label{eq:StEq-IdealGas-Adiabatic}
 \end{align}
 (no hay que ponerle tanto amor a las constantes). Esta  
@@ -218,7 +218,7 @@ un ciclo se conoce como motor de calor.
 \label{•}
 \end{align}
 pero como no hay cambio en la energía interna porque 
-el sistema se encuentra en contacto con una reserva de
+el sistema se encuentra en contacto con una fuente de
 energía (infinita, de manera idealizada), entonces
 \begin{align}
 \eta=\frac{\QH-\QL}{\QH}
@@ -257,8 +257,99 @@ para un motor de gasolina.
   isotérmicas.}
   \label{fig:diesel-cycle}
 \end{figure}
+\item Resumen del mecanismo de los motores: 
+\begin{itemize}
+\item Existe un proceso o conjunto de procesos durante los cuales 
+existe absorción de calor de una fuente externa a mayor temperatura.
+\item Existe un proceso o conjunto de procesos durante los cuales
+el calor es eyectado a una fuente de calor externa a menor 
+temperatura.
+\end{itemize}
+\item \textbf{2da. Ley de la Termodinámica (Kelvin-Planck):} 
+Es imposible construir un motor que opere en ciclos y extraiga calor
+de una fuente que convierta el calor extraído exclusivamente en trabajo.
+\item Un frigorífico es el proceso inverso a un ciclo: (1) se extrae calor
+a baja temperatura y (2) se eyecta mucho calor a temperatura alta. En
+este ciclo el trabajo es realizado \textbf{sobre} el sistema.
+\item \textbf{2da. Ley de la Termodinámica (Clauius):} 
+Es imposible construir un frigorífico que, operando en un ciclo, 
+transferencia completamente el calor de una fuente 
+de menor temperatura a una fuente de temperatura mayor.
+\item \janote{Qué pedo con la equivalencia de ambas formas 
+de formular 2da ley???? sección 6.8}
+\item \textbf{Rerversibilidad e irreversibilidad:} Un proceso 
+reversible es un proceso que se realiza de tal forma que el
+sistema y su entorno pueden regresar a sus estados iniciales
+sin producir ningún cambio en el resto del universo.1
 \end{itemize}
 
+
+\section{Ciclo de Carnot}
+\begin{itemize}
+\item Ciclo de Carnot: 
+\begin{enumerate}
+\item Proceso adiabático reversible en la dirección tal que 
+la temperatura aumenta hasta la temperatura de la fuente 
+de calor caliente a $T_H$.
+\item El sistema se mantiene en contacto con la fuente
+de calor a $T_H$, y un proceso isotérmico reversible 
+toma lugar en dirección y hasta tal punto que 
+el calor $\QH$ es absorbido por el sistema desde 
+la fuente. 
+\item Un proceso adiabático reversible ocurre en dirección 
+contraria al proceso 1 hasta que la temperatura baja hasta 
+la temperatura de la fuente de calor fría a $T_L$.
+\item El sistema se mantiene en contacto con la fuente de 
+calor a $T_L$ y un proceso isotérmico reversible toma lugar 
+en dirección opuesta al proceso 2 hasta que el sistema y 
+su entorno se encuentran en sus estados iniciales. Durante
+este proceso el calor $\QL$ sale del sistema hacia la fuente
+de temperatura $T_L$.
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/carnot-cycle.png}
+  \caption{Ciclo de Carnot de un gas real.}
+  \label{fig:diesel-cycle}
+\end{figure}
+
+\newpage
+
+\item \textbf{Teorema de Carnot:} Ningún motor de calor entre
+dos fuentes de calor puede ser más eficiente que un motor de
+Carnot que opere entre las mismas dos fuentes de calor.
+\begin{proof}
+Consideremos los siguientes dos ciclos:
+\begin{multicols}{2}
+\setlength{\columnseprule}{0pt}
+\centering
+Ciclo de Carnot $R$
+\begin{enumerate}
+\item Absorbe $\QH$ de la fuente de calor caliente.
+\item El sistema realiza el trabajo $\W$
+\item El calor $\QH-\W$ se entrega del sistema al entorno.
+\item Eficiencia $\eta_R=\W/\QH$
+\end{enumerate} 
+\columnbreak
+\centering
+Ciclo de motor irreversible $I$
+\begin{enumerate}
+\item Absorbe $\abs{Q_H'}$ de la fuente de calor caliente.
+\item El sistema realiza el trabajo $\abs{W}$
+\item El calor $\abs{Q_H'}-\abs{W}$ se entrega del sistema al entorno.
+\item Eficiencia $\eta_I=\abs{W}/\abs{Q_H'}$
+\end{enumerate}
+\end{multicols}
+Asumamos que $\eta_I>\eta_R$, entonces $\QH>\abs{Q_H'}$. Ahora 
+consideremos los ciclos inversos. El calor neto que se extrae 
+de la fuente de calor fría es $\QH-\abs{Q_H'}$, que es una cantidad
+positiva. Sin embargo, también el calor que el sistema entrega
+a la fuente caliente es $\QH-\abs{Q_H'}$. Por lo tanto, el sistema
+(un frigorífico) estaría transfiriendo todo el calor extraído de una 
+fuente de calor fría hacia una fuente de calor caliente, lo cual 
+viola la segunda ley de la Termodinámica. 
+\end{proof}
+\end{enumerate}
+\end{itemize}
 
 
 
