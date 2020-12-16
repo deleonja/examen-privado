@@ -430,30 +430,165 @@ la 2da ley. Bárbaro ese Clausius}
   \label{fig:reversible-paths}
 \end{figure}
 \end{itemize}
+\section{Métodos matemáticos}
+\begin{itemize}
+\item \textbf{Transformaciones diferenciales de Legendre:} 
+Si el estado de un sistema está descrito por una función 
+de dos variables $\mathbf{f(x,y)}$, que satisface la ecuación
+\begin{align}
+df=udx+vdy
+\label{eq:df-Legendre}	
+\end{align}
+y deseamos cambiar la descripción a una que involucre
+una nueva función $\mathbf{g(u,y)}$, que satisfaga una 
+ecuación similar en términos de $du$ y $dy$, entonces
+es necesario definir una \textbf{transformación
+de Legendre} $g(u,y)$ como 
+\begin{align}
+g\equiv f-ux.
+\label{eq:Legendre-transformation}
+\end{align}
+La función $g$ debe satisfacer
+\begin{align}
+\mathbf{dg=-xdu+vdy}.
+\end{align}
+\item Usemos la transformación de Legendre para definir
+nuevas funciones de estado. Primero, la entalpía $H\equiv U+PV$.
+Como $U$, $P$ y $V$ son funciones de estados, también lo es $H$.
+En forma diferencial, siguiendo la transformación de Legendre:
+\begin{align}
+dH=VdP+TdS
+\end{align}
+\item Relaciones diferenciales de las 4 funciones de estado:
+\begin{align}
+dU = -PdV+TdS\nonumber\\
+dH=VdP+TdS \label{eq:diff-form-eq-state}\\
+dA=-PdV-SdT\nonumber\\
+dG=VdP-SdT\nonumber
+\end{align}
+\item \textbf{Entalpía:}  
+\begin{align*}
+dH-dU&=VdP+PdV\\
+dH&=dU+VDP+PdV\\
+dH&=dQ+VdP,
+\end{align*}
+cuando $dQ=0$:
+\begin{align*}
+\Delta H=\int VdP,
+\end{align*}
+y cuando $dP=0$:
+\begin{align*}
+\Delta H=\int dQ=\int C_PdT \text{Calor latente [?]}
+\end{align*}
+\item \textbf{Dos teoremas matmáticos:} (encaminados a 
+las relaciones de Maxwell)
+\begin{teorema}[\label{teo:1}]
+Si 
+\begin{align*}
+dz=\qty(\pdv{z}{x})_ydx+\qty(\pdv{z}{y})_xdy,
+\end{align*}
+y tomamos 
+\begin{align*}
+M&=\qty(\pdv{z}{x})_y & N&=\qty(\pdv{z}{y})_x,
+\end{align*}
+entonces $z$, $M$ y $N$ son funciones de $x$ y $y$. Se cumple que
+\begin{align*}
+\pdv{M}{y}&=\qty(\pdv{z}{x}{y})_x & 
+\pdv{N}{x}&=\qty(\pdv{z}{y}{x})_y,
+\end{align*}
+ya que el lado derecho de ambas ecuaciones es igual entonces se 
+sigue que 
+\begin{align}
+\qty(\pdv{M}{y})_x=\qty(\pdv{N}{x})_y.
+\end{align}
+Esto se conoce como la condición para un diferencial exacto y 
+se aplica para las cuatro funciones $U$, $H$, $A$ y $G$.
+\end{teorema}
+\begin{teorema}
+Supongamos una función $f=f(x,y,z)$. Entonces considerando
+$x=x(f,y)$ y $y=y(f,z)$
+\begin{align*}
+dx&=\qty(\pdv{x}{f})_ydf+\qty(\pdv{x}{y})_fdy\\
+dy&=\qty(\pdv{y}{f})_zdf+\qty(\pdv{y}{z})_fdz,
+\end{align*}
+sustityendo la segunda ecuación en la primera
+\begin{align*}
+dx&=\qty(\pdv{x}{f})_ydf+\qty(\pdv{x}{y})_f
+\qty(\qty(\pdv{y}{f})_zdf+\qty(\pdv{y}{z})_fdz),
+\end{align*}
+pero 
+\begin{align*}
+dx=\qty(\pdv{x}{f})_zdf+\qty(\pdv{x}{z})_fdz.
+\end{align*}
+Igualando $dz$ de las últimas dos ecuaciones tenemos 
+\begin{align}
+\qty(\pdv{x}{y})_f\qty(\pdv{y}{z})_f=\qty(\pdv{x}{z})_f,
+\end{align}
+lo que significa que 
+\begin{align}
+\qty(\pdv{x}{y})_f\qty(\pdv{y}{z})_f\qty(\pdv{z}{x})_f=1.
+\end{align}
+Además, igualando las mismas ecuaciones para $df$
+\begin{align}
+\qty(\pdv{x}{f})_z=
+\qty(\pdv{x}{f})_y+\qty(\pdv{x}{y})_f\qty(\pdv{y}{f})_z.
+\end{align}
+\end{teorema}
+\end{itemize}
+\subsection{Relaciones de Maxwell}
+\janote{Creo que esta sección, junto con las 
+3 leyes debería ser lo más importante de Termo\newline}
+Teniendo en mente de nuevo la forma diferencial de las
+ecuaciones de estado
+\begin{align*}
+dU = -PdV+TdS\\
+dH=VdP+TdS \\
+dA=-PdV-SdT\\
+dG=VdP-SdT,
+\end{align*}
+y usando el teorema \eqref{teo:1} se tiene
+\begin{align}
+-\qty(\pdv{P}{S})&=\qty(\pdv{T}{V}) \\
+\qty(\pdv{T}{P})&=\qty(\pdv{V}{S}) \\
+\qty(\pdv{S}{V})&=\qty(\pdv{P}{T}) \\
+-\qty(\pdv{S}{P})&=\qty(\pdv{V}{T}),
+\end{align}
+que se conocen como las \h{\textbf{relaciones de Maxwell}}.
+Estas ecuaciones expresan relaciones que se cumplen 
+para cualquier estado de equilibrio de un sistema hidrostático.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=5cm]{images/vat-vus.png}
+  \caption{Para recordar más fácil las relaciones de Maxwell.}
+  \label{fig:vat-vus}
+\end{figure}
 
+\subsection{Ecuaciones $TdS$}
+Considerando la función de entropía $S$ dependiente de 
+distintos pares de variables termodinámicas $T,V,P$ se pueden 
+obtener las ecuaciones $TdS$. 
+\begin{itemize}
+\item \textbf{Primera ecuación $TdS$:} $(S=S(T,V))$
+\begin{align}
+TdS=C_VdT+T\qty(\pdv{P}{V})_VdV
+\end{align}
+\item \textbf{Segunda ecuación $TdS$:} $(S=S(T,P)$
+\begin{align}
+TdS=C_PdT-T\qty(\pdv{V}{T})_PdP
+\end{align}
+\end{itemize}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsection{Ecuaciones de la energía interna}
+\begin{itemize}
+\item \textbf{Primera ecuación de la energía interna:}
+\begin{align}
+\qty(\pdv{U}{V})_T=T\qty(\pdv{P}{T})_V-P
+\end{align}
+\item \textbf{Segunda ecuación de la energía interna:}
+\begin{align}
+\qty(\pdv{U}{P})_T=T\qty(\pdv{V}{T})_P-P\qty(\pdv{V}{P})_T
+\end{align}
+\end{itemize}
 
 
 
