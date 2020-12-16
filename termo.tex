@@ -351,6 +351,85 @@ viola la segunda ley de la Termodinámica.
 \end{enumerate}
 \end{itemize}
 
+\section{Entropía}
+\begin{itemize}
+\item Para cualquier ciclo reversible se cumple que
+\begin{align}
+\oint_R \dv{Q}{T}=0.
+\label{eq:clausius-theo}
+\end{align}
+Este resultado es conocido como el teorema de Clausius.
+
+\item \textbf{Entropía}
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/reversible-paths.png}
+  \caption{Dos caminos reversibles uniendo dos estados de equilibrio
+  de un sistema.}
+  \label{fig:reversible-paths}
+\end{figure}
+Consideremos un sistema como el que describe la \Fref{fig:reversible-paths}. 
+Del teorema de Clausius, \eqref{eq:clausius-theo},
+\begin{align*}
+\sideset{_{R_1R_2}}{}\oint \dv{Q}{T}&=
+\sideset{_{R_1}}{_i^f}\int \dv{Q}{T} 
++\sideset{_{R_2}}{_f^i}\int \dv{Q}{T}=0\\
+\sideset{_{R_1}}{_i^f}\int \dv{Q}{T} &=-\sideset{_{R_2}}{_f^i}\int \dv{Q}{T},
+\end{align*}
+pero como $R_2$ es un camino reversible
+\begin{align*}
+-\sideset{_{R_2}}{_f^i}\int \dv{Q}{T} = \sideset{_{R_2}}{_i^f}\int \dv{Q}{T},
+\end{align*}
+por lo tanto 
+\begin{align}
+\sideset{_{R_1}}{_i^f}\int \dv{Q}{T} &=\sideset{_{R_2}}{_i^f}\int \dv{Q}{T}.
+\end{align}
+De esta ecuación se deriva que existe una función de variables 
+termodinámicas de un sistema cuya diferencia entre sus 
+valores final menos inicial es igual a la integral $\sideset{_R}{_i^f}\int
+\dbar Q/T$: la función de entropía $S$,
+\begin{align}
+S_f-S_i&=
+\sideset{_R}{_i^f}\int \dv{Q}{T},
+\end{align}
+por lo cual el cambio en la entropía $\Delta S$ es independiente
+del camino reversible que tome el sistema. Esto de forma diferencial,
+para dos estados inicial y final infinitesimalmente juntos, esta ecuación 
+se vuelve
+\begin{align}
+dS=\frac{\dbar Q_R}{T},
+\end{align}
+el subíndice $R$ enfatiza que el $\dbar Q$ se transfiera de manera 
+reversible.
+\item \textbf{Principio de Carathéodory:} 
+En la vecindad de cualquier estado inicial $P_0$ de un sistema
+físico, existen estados vecinos que son inaccesibles desde $P_0$ 
+llegando a ellos a lo largo de trayectorias cuasi estáticas adiabáticas.
+\item \textbf{Proceso iseontrópico:} $dS=0\rightarrow S=\text{cte.}$
+\item \textbf{Enunciado matemático de Clausius de la 
+2da. ley de la Termodinámica:}
+\begin{align}
+\oint \dv{Q}{T}\leq 0
+\end{align}
+\item \textbf{En general,}
+\begin{align}
+dS \geq \dv{Q}{T},
+\label{eq:general-dS}
+\end{align}
+donde la igualdad se cumple para procesos reversibles y la
+desigualdad para procesos irreversibles. \janote{Esta vaina me parece
+sumamente importante, como que va cerrando el marco teórico de
+la 2da ley. Bárbaro ese Clausius}
+\item \textbf{Principio de entropía:} $\Delta S(\text{universo})\geq0$ 
+(también una consecuencia de la 2da ley de la Termodinámica)
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/entropy-principle.png}
+  \caption{Un ciclo que contradice la 2da. ley de la Termodinámica
+  a menos que $S_f>S_i$.}
+  \label{fig:reversible-paths}
+\end{figure}
+\end{itemize}
 
 
 

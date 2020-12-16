@@ -20,28 +20,30 @@
 \usepackage{physics}
 \usepackage{mathtools}
 \usepackage{dsfont}
+\usepackage{tensor}
 
 % Theorems, proofs, etc
 \usepackage{amsthm}
 
-\definecolor{mycolor}{RGB}{255,50,0}
+
 
 \usepackage{fancybox}
 \usepackage{colortbl}
 \usepackage{amsbsy}
 \usepackage[draft,inline,nomargin]{fixme} \fxsetup{theme=color}
-\FXRegisterAuthor{cp}{acp}{\color{blue}CP}
+
+%This defines my comments
+\definecolor{mycolor}{RGB}{255,50,0}
 \FXRegisterAuthor{ja}{aja}{\color{mycolor}JA}
-\FXRegisterAuthor{cc}{acc}{\color{Purple}CC}
 
 
-\usepackage[]{lineno} % \linenumbers
+\usepackage[]{lineno} \linenumbers
 \setlength\linenumbersep{3pt}
 
 \newcommand{\fref}[1]{fig.~\ref{#1}}  \newcommand{\tref}[1]{table~\ref{#1}}
 \newcommand{\Fref}[1]{Fig.~\ref{#1}}  \newcommand{\Tref}[1]{Table~\ref{#1}}
 
-%\usepackage{hyperref}
+\usepackage{hyperref}
 %\usepackage{commath}
 \decimalpoint
 \renewcommand{\tablename}{Tabla}
@@ -97,14 +99,20 @@
 Licenciatura en Física}
 \author{J.A. de León}
 
+\newtheorem{definition}{Definición}[section]
+
+\newtheorem{teorema}{Teorema}[section]
+
+\newtheorem{property}{Propiedad}[section]
+
 \begin{document}
 \maketitle
 
 \input{termo.tex}
 
 
-%\bibliographystyle{abbrv}
-%\bibliography{references}
+\bibliographystyle{abbrv}
+\bibliography{references}
 \end{document}
 
 
