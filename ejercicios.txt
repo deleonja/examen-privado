@@ -5,8 +5,9 @@ Problemas:
 3.2, 3.5
 4.10*, 
 5.7*, 5.9
-6..3*
+6.3*
+10.1*, 10.8
 
-total = 5
+total = 8
 
 *probablemente me atoré y aún no los acabo
