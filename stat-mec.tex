@@ -42,4 +42,139 @@
 	\end{align}
 	así hemos llegado a la ecuación de estado del gas ideal desde 
 	principios estadísticos.
+	
+	\item \textbf{Paradoja de Gibbs (entropía de mezcla):} Gibbs consideró
+	una situación como la de la \Fref{fig:gibbs-paradox} en la que 2 gases
+	iguales se mantienen a ambos lados de una pared diatérmana, luego
+	la pared se quita y se permite que ambos gases se mezclen. En este 
+	caso particular tenemos un proceso reversible porque podemos 
+	volver a colocar la pared y tendríamos la misma situación inicial. 
+	Sin embargo, con métodos estadísticos se concluye que la diferencia
+	de entropía entre los estados inicial y final del sistema total es distinto
+	de cero, lo que contradice lo bien conocido de la termodinámica 
+	de que en un proceso reversible adiabático el cambio en la 
+	entropía es igual a cero. La propuesta de Gibbs para resolver
+	esta paradoja fue cambiar la expresión de la entropía $S$ de 
+	un gas ideal de 
+	\begin{align}
+	S(N,V,E)=Nk\ln\qty[\frac{V}{h^3}\qty(\frac{4\pi mE}{3N})^{3/2}]
+	+\frac{3}{2}Nk
+	\end{align}
+	a
+	\begin{align}
+	S(N,V,E)=Nk\ln\qty[\frac{V}{Nh^3}\qty(\frac{4\pi mE}{N})^{3/2}]
+	+\frac{5}{2}Nk,
+	\end{align}
+	habiendo así agregado de manera \textit{ad hoc} los términos
+	$-k\ln N!$ $(\approx Nk\ln N-Nk)$.
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=5cm]{images/mixing-2gases.png}
+	    \caption{Mezcla de dos gases ideales.}
+	    \label{fig:gibbs-paradox}
+	  \end{figure}
+	  
+	\item La consecuencia física del arreglo de Gibbs es que se está 
+	reduciendo el número de microestados accesibles por el sistema 
+	en un factor $N!$. La justificación de esto es que estamos lidiando
+  con partículas idénticas que son indistinguibles, por consiguiente
+  no tiene sentido etiquetar individualmente a cada una de las
+  partículas. Todo lo que podemos contar es la distribución 
+  sobre los estados de energía.
+\end{itemize}
+
+\section{Elementos de la teoría de los ensambles}
+\begin{itemize}
+	\item Un microestado de un sistema clásico, en un tiempo $t$, está
+	definido por las posiciones y momenta de todas las partículas
+	que constituyen al sistema.
+	\item Las coordenadas $(q_i,p_i)$ representan un punto en 
+	un espacio de $6N$ dimensiones conocido como el espacio de fases.
+	\item Función de densidad $\rho(q,p;t)$: para describir mejor 
+	los ensambles de microestados en los que se puede encontrar
+	un sistema. Esta función es tal que el número de puntos 
+	representativos dentro del elemento de volumen $d^{3N}qd^{3N}p$
+	alrededor del punto $(q,p)$ del espacio de fases está dado por 
+	el proudcto $\rho(q,p;t)d^{3N}qd^{3N}p$.
+	\item El promedio del ensamble $\expval{f}$ de una cantidad
+	física $f(q,p)$ está dado por 
+	\begin{align}
+	\expval{f}=
+	\frac{\int f(q,p)\rho(q,p;t)d^{3N}qd^{3N}p}{\int \rho(q,p;t)d^{3N}qd^{3N}p}
+	\end{align}
+	
+	\item \textbf{Teorema de Liouville:} Consideremos una región de
+	volumen arbitrario $\omega$, cuya superficie la vamos a denotar
+	por $\sigma$, como se ve en la \Fref{fig:liouville}. 
+	Entonces, la tasa a la que el número de puntos 
+	representativos en este elemento de volumen aumenta con 
+	el tiempo es
+	\begin{align}
+	\pdv{t}\int_{\omega} \rho d\omega.
+	\end{align}
+	Por otro lado, el flujo hacia afuera de $\omega$ está dado por 
+	\begin{align}
+	\int _{\sigma}\rho \vb{v}\cdot \vb{\hat{n}}d\sigma.
+	\end{align}
+	Por el teorema de la divergencia (que no tengo fresco en el momento
+	que estoy escribiendo esto \janote{OJO}) tenemos 
+	\begin{align}
+	\int _\omega \div{\rho \vb{v}}d\omega.
+	\end{align}
+	En vista que no hay fuentes ni sumideros
+	\begin{align}
+	\pdv{t}\int_{\omega} \rho d\omega=-\int _\omega \div{\rho \vb{v}}d\omega,
+	\end{align}
+	por lo que 
+	\begin{align}
+	\int _{\omega}\qty(\pdv{\rho}{t}+\div{\rho\vb{v}})d\omega=0.
+	\end{align}
+	Por lo cual, inmediatamente se tiene 
+	\begin{align}
+	\pdv{\rho}{t}+\div{\rho\vb{v}}=0,
+	\end{align}
+	y esta ecuación es conocida como la ecuación de continuidad. 
+	Trabajando más esta ecuación 
+	\begin{align}
+	\pdv{\rho}{t}+\sum_{i=1}^{3N}
+	\qty(\pdv{\rho}{q_i}\dot{q}_i+\pdv{\rho}{p_i}\dot{p}_i)+
+	\rho \sum_{i=1}^{3N}
+	\qty(\pdv{\dot{q}_i}{q_i} + \pdv{\dot{p}_i}{p_i})=0.
+	\end{align}
+	\h{Recordatorio eqs. de Hamilton:} 
+	\begin{align}
+	\dot{q}_i&=\pdv{H(q_i,p_i)}{p_i}\\
+	\dot{p}_i&=-\pdv{H(q_i,p_i)}{q_i}.
+	\end{align}
+	Usando la ecuaciones de Hamilton notamos que 
+	el tercer término en la ecuación de continuidad se hace cero,
+	por consiguiente llegamos al resultado 
+	conocido como el \h{teorema de Liouville}:
+	\begin{align}
+	\pdv{\rho}{t}+\{\rho,H\}=0,
+	\end{align}
+	donde $\{\rho,H\}$ es el bracket de Poisson. La consecuencia 
+	física de este teorema es que las trayectorias en el espacio de 
+	fases se mueven de la misma manera que un fluido 
+	incompresible.
+	\begin{figure}
+	  \centering
+	  \includegraphics[width=5cm]{images/phase-space.png}
+	  \caption{Elemento de volumen en el espacio de fases.}
+	  \label{fig:liouville}
+	\end{figure}
+	
+	\item \textbf{El ensamble microcanónico:}
+	El macroestado del ensamble microcanónico de un sistema está 
+	definido por el número de moléculas $N$, el volumen $V$ y la 
+	energía $E$. El ensamble microcanónico es una colección de
+	sistemas para los cuales la función de densidad $\rho$ está 
+	dada por 
+	\begin{align}
+	\rho(q,p)=\text{cte.}\hspace{1cm}
+	\text{si} \hspace{2mm}
+	\qty(E-\frac{1}{2}\Delta)\leq
+	H(q,p)\leq
+	\qty(E+\frac{1}{2}\Delta).
+	\end{align}
 \end{itemize}
