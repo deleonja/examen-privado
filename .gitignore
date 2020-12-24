@@ -8,3 +8,4 @@
 *.dvi
 *.xopp
 *.xopp~
+.*.autosave.xopp
