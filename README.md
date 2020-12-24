@@ -3,7 +3,7 @@ Por: José Alfredo de León
 
 Descripción: 
 
-Notas en $$\LaTex$$ con resumen de conceptos sobre 
+Notas en _LaTex_ con resumen de conceptos sobre 
 - Termodinámica
 - Mecánica Estadística
 - Electromagnetismo
