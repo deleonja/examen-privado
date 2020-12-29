@@ -210,5 +210,41 @@
 	\begin{align}
 	\mathcal{V}=-2K,
 	\end{align}
-	con $K$ la energía cinética del sistema.
+	con $K$ la energía cinética del sistema.	
 \end{itemize}
+
+\subsection{Osciladores armónicos}
+Asumiendo osciladores armónicos en una dimensión el hamiltoniano
+$H$ del sistema es 
+\begin{align}
+H(q_i,p_i)=\sum_i\frac{1}{2}m\omega^2q_i^2+\frac{1}{2m}p_i^2.
+\end{align}
+Al calcular la función de partición $\mathcal{Z}$ de un oscilador armónico
+\begin{align}
+\mathcal{Z}&=\int _{-\infty}^{\infty}\int _{-\infty}^{\infty}
+\exp\qty[-\beta\qty(\frac{1}{2}m\omega^2q^2+\frac{1}{2m}p^2)]
+\frac{dqdp}{h}\nonumber\\
+&=\frac{1}{h}\qty(\frac{2\pi}{\beta m\omega^2})^{1/2}
+\qty(\frac{2\pi m}{\beta})^{1/2}=
+\frac{1}{\beta\hbar\omega}=\frac{kT}{\hbar\omega}.
+\end{align}
+De manera que entonces la función de partición del sistema 
+completo es 
+\begin{align}
+\mathcal{Z}=\qty(\frac{kT}{\hbar\omega})^N.
+\end{align}
+La energía libre de Helmholtz está dada por 
+\begin{align}
+A&=-kT\ln \mathcal{Z}\nonumber\\
+&=-NkT\ln\qty(\frac{kT}{\hbar\omega}).
+\end{align}
+De manera que las otras variables termodinámicas son
+\begin{align}
+S&=-\qty(\pdv{A}{T})_{N,V}\nonumber\\
+&=Nk\qty[\ln\qty(\frac{kT}{\hbar\omega})+1]
+\end{align}
+y 
+\begin{align}
+U&=\pdv{\ln\mathcal{Z}}{\beta}\nonumber\\
+&=NkT.
+\end{align}
