@@ -9,7 +9,9 @@ y ejercicios (Mathematica) de
 - Mecánica Clásica
 - Mecánica Cuántica
 
-__Nota:__ El archivo _notas.tex_, dentro de la carpeta _notas_e s el documento master. 
+__Este repositorio contiene las siguientes carpetas__:
+_apuntes_: apuntes con resumen de conceptos. El archivo _notas.tex_ es el documento master. 
+_ejercicios_: ejercicios resueltos en Mathematica.
 
 Para las deducciones y ejercicios a lápiz, calendarización 
 de estudio de temas y otros: 
