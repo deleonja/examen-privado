@@ -16,6 +16,7 @@ Libro: Introduction to Electrodynamics, Griffiths, 4th Ed.
 Problemas: 
 
 2.31, 2.32
+3.7, 3.8
 
 
 *probablemente me atoré y aún no los acabo
