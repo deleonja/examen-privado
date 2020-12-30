@@ -1,0 +1,210 @@
+\chapter{Electromagnetismo}
+\section{Electrostática}
+\subsection{Campo eléctrico y ley de Gauss}
+\begin{itemize}
+\item El campo eléctrico producido por una densidad de carga $\rho(\vb{r})$
+es
+\begin{align}
+\frac{q}{4\pi \epsilon_0}\int \frac{\rho(\vb{r}')}{r^2}\uv{r}dV'.
+\end{align}
+
+\item Se define el flujo de campo eléctrico $\vb{E}$ a través de 
+una superficie $\mathcal{S}$ como
+\begin{align}
+\Phi_E\equiv\int _{\mathcal{S}}\vb{E}\vdot d\vb{a}.
+\end{align}
+
+\item \textbf{Ley de Gauss:}
+\begin{align}
+\oint \vb{E}\vdot d\vb{a}=\frac{1}{\ep}q_{\text{enc}},
+\end{align}
+el flujo de campo eléctrico atravesando una superficie cerrada
+es proporcional a la carga que se encuentra encerrada dentro 
+de la superficie. La dirección del flujo nos indica si tenemos un 
+sumidero o una fuente y, al mismo tiempo, el signo de la carga
+encerrada.
+
+\item Es importante aprender a pasar de la forma integral, a la forma
+diferencial de la ley de Gauss. Veamos a continuación. 
+\begin{align*}
+\oint_{\mathcal{S}} \vb{E}\vdot d\vb{a}=\int_{\mathcal{V}}
+\qty(\div{\vb{E}})dV.
+\end{align*}
+\textit{\textbf{Paréntesis (teorema de la divergencia)}: la integral 
+de superficie cerrada de un campo vectorial es igual a la integral 
+de volumen de la divergencia del campo vectorial, integrado sobre
+el volumen que encierra la superficie,}
+
+Recordando que 
+\begin{align*}
+q_{\text{enc}}&=\int_{\mathcal{V}}\rho \ dV,
+\end{align*}
+por consiguiente, 
+\begin{align*}
+\int_{\mathcal{V}}\qty(\div{\vb{E}})dV=
+\frac{1}{\ep}\int_{\mathcal{V}}\rho \ dV,
+\end{align*}
+puesto que la integración es sobre el mismo volumen, entonces
+los integrandos deben ser iguales,
+\begin{align}
+\div{\vb{E}}=\frac{\rho}{\ep}.
+\end{align}
+
+La ley de Gauss es siempre cierta, \textit{pero no siempre útil}.
+Particularmente, las simetrías son cruciales para poder aprovechar 
+el resultado establecido en la ley de Gauss:
+\begin{enumerate}
+\item Simetría esférica: superficie gaussiana una esfera concéntrica.
+\item Simetría cilíndrica: superficie gaussiana un cilindro coaxial. 
+\item Simetría plana: superficie gaussiana una caja de pastillas.
+\end{enumerate}
+Aprovecharse de las simetrías $+$ utilizar el principio de superposición
+hace que la ley de Gauss se vuelva especialmente útil para su aplicación.
+
+\item $\curl{\vb{E}}=0$. Tomemos el caso de una carga puntual
+$q$, cuyo campo eléctrico $E$ es
+\begin{align}
+\vb{E}=\frac{1}{4\pi\ep}\frac{q}{r^2}\uv{r}.
+\end{align}
+Ahora calculemos la integral de línea entre dos puntos arbitrarios
+$a$ y $b$ del espacio, 
+\begin{align*}
+\int_a^b \vb{E}\vdot d\vb{l}.
+\end{align*}
+En coordenadas esféricas, $d\vb{l}=dr\uv{r}
++rd\theta \uv{\boldsymbol{\theta}}+
+r\sin\theta d\phi \uv{\boldsymbol{\phi}}$, entonces
+\begin{align*}
+\int_a^b\vb{E}\vdot d\vb{l}&=\int_a^b\frac{1}{4\pi\ep}\frac{q}{r^2}dr\\
+&=\frac{q}{4\pi\ep}\qty(\frac{1}{r_a}-\frac{1}{r_b}),
+\end{align*}
+por lo tanto, al integrar sobre una trayectoria cerrada la integral 
+debe ser igual a cero:
+\begin{align}
+\oint\vb{E}\vdot d\vb{l}=0.
+\end{align}
+Por consiguiente, aplicando el teorema de Stokes:
+\begin{align}
+\oint\vb{E}\vdot d\vb{l}&=\int \qty(\curl{\vb{E}})\vdot d\vb{a}=0\\
+\therefore \hspace{5mm} \curl{\vb{E}}&=0.
+\end{align}
+Este resultado se sigue satisfaciendo para cualquier distribución 
+estática de cargas, pues si tenemos $N$ cargas, el campo eléctrico
+de la distribución está determinado por 
+\begin{align*}
+\vb{E}=\vb{E}_1+\vb{E}_2+\ldots+\vb{E}_N\\
+\end{align*}
+\begin{align}
+\therefore \hspace{5mm} 
+\curl{\vb{E}}=\curl{\vb{E}_1}+\curl{\vb{E}_2}+\ldots+
+\curl{\vb{E}_N}=0,
+\end{align}
+dado que cada rotor se debe hacer cero.
+\end{itemize}
+\subsection{Potencial eléctrico}
+\begin{itemize}
+\item El \textbf{potencial eléctrico} es una función escalar que se define
+como
+\begin{align}
+V(\vb{r})\equiv -\int_{\mathcal{O}}^r\vb{E}\vdot d\vb{l},
+\end{align}
+con $\mathcal{O}$ un punto de referencia.
+
+\item El teorema fundamental de los gradientes establece que
+\begin{align*}
+V(\vb{r}_b)-V(\vb{r}_a)=\int_a^b \grad V\vdot d\vb{l},
+\end{align*}
+por consiguiente, 
+\begin{align*}
+\int_a^b \grad V\vdot d\vb{l}&=-\int_a^b \vb{E}\vdot d\vb{l}\\
+\vb{E}&=-\grad V.
+\end{align*}
+
+\item Es una consecuencia de $\curl{\vb{E}}=0$ que las componentes
+$E_i$ de $\vb{E}$ no sean completamente independientes entre ellas.
+De hecho, la formulación del potencial eléctrico explota al máximo 
+esto.
+
+\item \textbf{Ecuación de Poisson:}
+\begin{align}
+\grad^2V=\frac{\rho}{\ep}.
+\end{align}
+
+\item Cálculo del potencial eléctrico $V$ a partir de la distribución de
+carga $\rho$:
+\begin{align}
+\frac{1}{4\pi\ep}\int\frac{\rho(\vb{r}')}{r}\ dV'.
+\end{align}
+
+\item \textbf{Discontinuidad al cruzar una superficie de carga $\sigma$}:
+supongamos una superficie con densidad superficial de cargar $\sigma$.
+Consideremos un área $A$ sobre la superficie, tan pequeña como 
+sea necesario para que $\sigma=\text{cte.}$, y apliquemos 
+la ley de Gauss con una caja de pastillas gaussiana. Los lados 
+de la caja de pastillas (componente paralela a la superficie) no 
+contribuyen nada al flujo neto de campo eléctrico, por lo tanto, 
+sumando las contribuciones perpendiculares a la superficie se 
+tiene $\qty(E_{\text{arriba}}-E_{\text{abajo}})A=\sigma A/\ep$,
+entonces $E_{\text{arriba}}-E_{\text{abajo}}=\sigma /\ep$. Por 
+lo cual, se concluye que existe una discontinuidad de la componente 
+normal de $\vb{E}$ al atravesar una superficie de carga que es igual 
+a $\sigma/\ep$. Las componentes paralelas a la superficie son continuas
+y es consecuencia directa de 
+\begin{align}
+\oint \vb{E}\vdot d\vb{l}=0.
+\end{align}
+No obstante, el potencial eléctrico es continuo a través de cualquier
+frontera, ya que 
+\begin{align*}
+V_{\text{arriba}}-V_{\text{abajo}}=-\int_a^b\vb{E}\vdot d\vb{l};
+\end{align*}
+conforme la trayectoria entre $a$ y $b$ se hace igual a cero, 
+también lo hace el valor de la integral, por consiguiente
+\begin{align}
+V_{\text{arriba}}=V_{\text{abajo}}.
+\end{align}
+\end{itemize}
+
+\subsection{Trabajo y energía}
+\begin{itemize}
+\item De lo que sabemos de mecánica el trabajo sobre un sistema 
+para moverlo desde $a$ hasta $b$ es 
+\begin{align}
+W=\int_a^b\vb{F}\vdot d\vb{l}.
+\end{align}
+Por consiguiente, el trabajo para mover una carga $q$ es
+\begin{align}
+W=-q\int_a^b\vb{E}\vdot d\vb{l}=q\qty(V_b-V_a)
+\end{align}
+
+\item La energía de una configuración de cargas se define 
+como la cantidad de trabajo necesario para armar la configuración:
+\begin{align}
+W=\frac{1}{2}\sum_i^nq_iV(\vb{r}_i),
+\label{eq:ch3-W-point}
+\end{align}
+donde $V$ es el potencial generado por el resto de las cargas 
+en la configuración.
+
+\item Si en vez tenemos una distribución continua de carga $\rho$
+entonces podemos reescribir la ecuación \eqref{eq:ch3-W-point}
+como
+\begin{align}
+W=\frac{1}{2} \int \rho Vd\tau.
+\end{align}
+Si utilizamos la ley de Gauss podemos resscribir esta ecuación como
+\begin{align}
+W&=\frac{\ep}{2} \int \qty(\div{\vb{E}}) Vd\tau\nonumber\\
+&=\frac{\ep}{2}\qty(-\int \vb{E}\vdot \qty(\grad V)d\tau
++\oint V\vb{E}\vdot d\vb{a}),
+\end{align}
+pero como $\grad V=-\vb{E}$,
+\begin{align}
+W&=\frac{\ep}{2}\qty(\int E^2d\tau+\oint V\vb{E}\vdot d\vb{a}),
+\end{align}
+consideramos la integración sobre todo el espacio, y de esa manera,
+\begin{align}
+W&=\frac{\ep}{2}\int E^2d\tau.
+\end{align}
+\end{itemize}
+
