@@ -372,4 +372,81 @@ asumiendo que $\lim_{x\to\infty}\vb{J}=0$,
 \vb{A}(\vb{r})=\frac{\mu_0}{4\pi}\int \frac{\vb{J}(\vb{r}')}{r}\ dV'
 \label{}
 \end{align}
-•
+\subsection{Condiciones de frontera}
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm]{images/sup-current.png}
+  \caption{Superficie de corriente.}
+  \label{fig:sup-current}
+\end{figure}
+Si consideramos la situación en la \Fref{fig:sup-current} y recordamos que
+$\div{\vb{B}}=0$, integramos sobre el volumen de la caja de pastillas,
+y aplicamos el teorema de la diverencia 
+\begin{align}
+\oint \vb{B}\vdot d\vb{a}&=0\\
+\qty(B^{\perp}_{\tx{arriba}}-B^{\perp}_{\tx{abajo}})A&=0\\
+B^{\perp}_{\tx{arriba}}&=B^{\perp}_{\tx{abajo}}.
+\end{align}
+Si ahora tomamos una espira, digamos alrededor de una de las caras
+de la caja de pastillas y hacemos que la altura de la caja sea 
+infinitesimalmente pequeña, tanto como lo necesitemos para 
+despreciar la contribución de la componente perpendicular 
+del campo magnético, 
+\begin{align}
+\oint \vb{B}\vdot d\vb{l}&=
+\qty(B^{\parallel}_{\tx{arriba}}-B^{\parallel}_{\tx{abajo}})l\\
+&=\mu_0I_{\tx{encerrada}}=\mu_0Kl\\
+\therefore \hspace{5mm}
+B^{\parallel}_{\tx{arriba}}-B^{\parallel}_{\tx{abajo}}&=\mu_0K
+\end{align}
+
+\section{El campo auxiliar $\vb{H}$}
+Similarmente al efecto de polarización, los campos magnéticos 
+en un medio producen el efecto de magnetización, que es 
+producir corrientes ligadas $\vb{J}_b=\curl{\vb{M}}$ dentro del 
+material y $\vb{K}_b=\vb{M}\cp \uv{n}$ en la superficie. En un 
+material magnético, la densidad de corriente total se puede 
+escribir como 
+\begin{align}
+\vb{J}=\vb{J}_b+\vb{J}_f.
+\end{align}
+Entonces, escribiendo la ley de Ampère
+\begin{align}
+\frac{1}{\mu_0}\qty(\curl{\vb{B}})&=\vb{J}_b+\vb{J}_f\\
+&=\vb{J}_f+\qty(\curl{\vb{M}})\\
+\curl{\qty(\frac{1}{\mu_0}\vb{B}-\vb{M})}&=\vb{J}_f,
+\end{align}
+entonces llamamos $\vb{H}=\frac{1}{\mu_0}\vb{B}-\vb{M}$ y
+\begin{align}
+\curl{\vb{H}}=\vb{J}_f,
+\end{align}
+donde $\vb{J}_f$ es la densidad de corriente libre.
+\subsection{Condiciones de frontera}
+Al atravesar una superficie de corriente en un medio se tiene
+\begin{align}
+H_{\tx{arriba}}^{\perp}-H_{\tx{abajo}}^{\perp}=
+-\qty(M_{\tx{arriba}}^{\perp}-M_{\tx{abajo}}^{\perp})
+\end{align}
+
+\section{Medio lineal}
+En materiales paramagnéticos y diamagnéticos la magnetización
+ocurre sólo mientras existe un campo magnético $\vb{B}$. En muchos 
+materiales la magnetización $\vb{M}$ es proporcional a la intensidad 
+del campo $\vb{B}$,
+\begin{align}
+\vb{M}=\chi_m\vb{H},
+\end{align}
+con $\chi_m$ la susceptibilidad magnética (adimensional).
+
+\begin{align}
+\vb{B}&=\mu_0\qty(\vb{H}+\vb{M})\\
+\vb{B}&=\mu_0\qty(1+\chi_m)\vb{H}\\
+\vb{B}&=\mu\vb{H},
+\end{align}
+donde $\mu$ se etiqueta como permeabilidad del medio. 
+\section{Medios no lineales}
+Materiales ferromagnéticos evidencian un comportamiento distinto
+al de otro tipo de materiales. Los ferromagnéticos muestran un comportamiento
+que se conoce como la curva de histéresis. 
+
+
