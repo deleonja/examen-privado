@@ -24,7 +24,11 @@ Libros utilizados:
 - *Mecánica Estadística*
   + __Principal:__ "Statistical Mechanics", 3rd Ed, RK Pathria and Paul D. Beale
   + __Complementario:__"Concepts in thermal physics", 2nd Ed, SJ Blundell and KM Blundell 
-  (_este lo use para buscar cosas puntuales_)
+  (_este lo use para buscar conceptos puntuales y para hacer ejercicios*_)
 
 - *Electromagnetismo*
   + __Principal:__ "Introduction to Electrodynamics", 4th Ed, Griffiths
+  
+  
+* El libro de Pathria está difícil para hacer ejercicios. Mejor sólo usarlo para 
+  lectura.
