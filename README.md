@@ -30,5 +30,5 @@ Libros utilizados:
   + __Principal:__ "Introduction to Electrodynamics", 4th Ed, Griffiths
   
   
-  * El libro de Pathria está difícil para hacer ejercicios. Mejor sólo usarlo para 
+* El libro de Pathria está difícil para hacer ejercicios. Mejor sólo usarlo para 
   lectura.
