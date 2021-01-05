@@ -28,7 +28,7 @@ encerrada.
 diferencial de la ley de Gauss. Veamos a continuación. 
 \begin{align*}
 \oint_{\mathcal{S}} \vb{E}\vdot d\vb{a}=\int_{\mathcal{V}}
-\qty(\div{\vb{E}})dV.
+\qty(\div{\vb{E}})dV
 \end{align*}
 \textit{\textbf{Paréntesis (teorema de la divergencia)}: la integral 
 de superficie cerrada de un campo vectorial es igual a la integral 
@@ -206,6 +206,7 @@ consideramos la integración sobre todo el espacio, y de esa manera,
 \begin{align}
 W&=\frac{\ep}{2}\int E^2d\tau.
 \end{align}
+\end{itemize}
 
 \section{Potenciales}
 \subsection{El método de imágenes}
@@ -218,5 +219,157 @@ y luego encontrar una configuración equivalente que satisfaga dichas
 condiciones de frontera, de esa manera, justificados en el teorema de 
 unicidad de las ecuaciones diferenciales, habremos encontrado 
 la solución al problema. 
+
+\section{Desplazamiento eléctrico}
+\begin{itemize}
+\item El efecto de la polarización es producir acumulaciones de carga 
+$\rho_b=-\div{\vb{P}}$ dentro del dieléctrico y $\sigma_b=\vb{P}
+\vdot \vb{\hat{n}}$ en la superficie. El campo eléctrico debido a la
+polarización del medio es justo el campo generado 
+por la carga ligada más la carga libre. 
+\item Dentro de un dieléctrico, la densidad total de carga 
+puede escribirse como 
+\begin{align}
+\rho=\rho_b+\rho_f,
+\end{align}
+y, entonces aplicando la ley de Gauss, tenemos 
+\begin{align}
+\ep \div{\vb{E}}=\rho=\rho_b+\rho_f=-\div{P}+\rho_f,
+\end{align}
+donde $\vb{E}$ es el campo total.
+\begin{align}
+\div{\qty(\ep \vb{E}+\vb{P})}=\rho_f.
+\end{align}
+Así definimos
+\begin{align}
+\vb{D} \equiv \qty(\ep \vb{E}+\vb{P}),
+\end{align}
+que se conoce como \textbf{desplazamiento eléctrico}. Por consiguiente, 
+en términos de $\vb{D}$ la ley de Gauss se escribe como
+\begin{align}
+\div{\vb{D}}=\rho_f.
+\end{align}
+Esta forma de escribir a la ley de Gauss para dieléctricos es particularmente
+útil porque solamente considera a la densidad de carga libre.
+\item A diferencia del vector de campo eléctrico $\vb{E}$, la componente
+paralela a una superficie conductora es discontinua, 
+\begin{align}
+\vb{D}^{\parallel}_{\text{arriba}}-\vb{D}^{\parallel}_{\text{abajo}}=
+\vb{P}^{\parallel}_{\text{arriba}}-\vb{P}^{\parallel}_{\text{abajo}}.
+\end{align}
 \end{itemize}
 
+\subsection{Dieléctricos lineales}
+\begin{itemize}
+\item Para muchos sistemas físicos la polarización $\vb{P}$ es directamente 
+proporcional al campo eléctrico $\vb{E}$:
+\begin{align}
+\vb{P}=\ep \chi_e\vb{E},
+\end{align}
+con $\chi_e$ la susceptibilidad eléctrica del medio, depende 
+de la estructura microscópica del medio.
+
+\item En un medio lineal:
+\begin{align}
+\vb{D}=\ep\vb{E}+\vb{P}=\ep\vb{E}+\ep\chi_e\vb{E}=
+\ep\qty(1+\chi_e)\vb{E},
+\end{align}
+entonces definimos
+\begin{align}
+\epsilon \equiv  \ep\qty(1+\chi_e).
+\end{align}
+Por lo tanto,
+\begin{align*}
+\vb{D}=\epsilon\vb{E}.
+\end{align*}
+\end{itemize}
+
+\section{Magnetostática}
+\subsection{Ley de Biot-Savart}
+La electrostática y magnetostática ocurre cuando
+\begin{align*}
+\pdv{\rho}{t}=0, \hspace{3mm} \pdv{\vb{J}}{t}=0.
+\end{align*}
+(cargas y corrientes estacionarias.)
+
+\begin{itemize}
+\item \textbf{Ley de Biot-Savart} para corrientes estacionarias:
+\begin{align}
+\vb{B}(\vb{r})=\frac{\mu_0}{4\pi}I\int \frac{d\vb{l}'\cp\vb{\hat{r}}}
+{r^2}
+\end{align},
+donde la integración se realiza a lo largo de trayectoria de la corriente
+en la dirección del flujo $d\vb{l}'$.
+\begin{align}
+\qty[\tx{B}]=\frac{\tx{N}}{\tx{A}\cdot \tx{m}}=\tx{T}.
+\end{align}
+
+\item De acuerdo con la ley de Biot-Savart el campo magnético 
+alredor de un cable infinito de corriente es 
+\begin{align}
+\vb{B}=\frac{\mu_0I}{2\pi s} \uv{\phi}.
+\end{align}
+De primera vista es evidente que $\curl{\vb{B}}\neq 0$,
+\begin{align}
+\oint \vb{B}\vdot d\vb{l}
+= \oint\frac{\mu_0I}{2\pi s}\ dl =\mu_0 I.
+\end{align}
+Ahora si suponemos que tenemos un manojo de cables de 
+corriente, cada uno contribuyendo $\mu_0I$ a la integral de 
+$\vb{B}$ alrededor del manojo de cables, entonces la integral 
+daría como resultado 
+\begin{align*}
+\oint \vb{B}\vdot d\vb{l}=\mu_0I_{\tx{enc}},
+\label{eq:ampere-inc-law}
+\end{align*}
+donde $I_\tx{enc}$ es la corriente que encierra una espira 
+alrededor de la corriente. También podemos escribir a la corriente
+$I$ en términos de la densidad de corriente $\vb{J}$,
+\begin{align}
+I_{\tx{enc}}=\int \vb{J}\vdot d\vb{a}.
+\end{align}
+Si aplicamos el teorema de Stokes a la ecuación \eqref{eq:ampere-inc-law}
+tenemos
+\begin{align}
+\int\curl{\vb{B}}\vdot d\vb{a}&=\mu_0\int \vb{J}\vdot d\vb{a}\\
+\therefore \hspace{5mm} \curl{\vb{B}}&=\mu_0\vb{J}.
+\end{align}
+Esta es conocida como la ley de Ampère en forma diferencial.
+
+\item \h{Revisar deducción formal de que la ley de Ampère se cumple 
+para cualquier forma de $\vb{J}$,	} \newline
+\h{siempre y cuando se cumpla $\div{\vb{J}}=0$.}
+
+\item Similarmente a la ley de Gauss para campos eléctricos, la 
+ley de Ampère es útil sólo cuando existen ciertas simetrías:
+\begin{enumerate}
+\item Líneas infinitas de corriente
+\item Planos infinitos
+\item Solenoides infinitos
+\item Toroides
+\end{enumerate}
+\end{itemize}
+
+\subsection{Vector potencial magnético}
+Que se cumpla que $\div{\vb{B}}$ hace que exista una función 
+vectorial de potencial $\vb{A}$ en magnetostática, tal que 
+\begin{align}
+\vb{B}=\curl{\vb{A}}.
+\end{align}
+Entonces
+\begin{align}
+\curl{\vb{B}}=\curl{\curl{\vb{A}}}=\grad{\qty(\div{\vb{A}})}
+-\grad^2\vb{A}=\mu_0\vb{J}.
+\end{align}
+Si imponemos la condición de $\div{\vb{A}}=0$, entonces tenemos 
+\begin{align}
+\grad^2\vb{A}=-\mu_0\vb{J}.
+\label{•}
+\end{align}
+Esta es simplementa la ecuación de Poisson, cuya solución, 
+asumiendo que $\lim_{x\to\infty}\vb{J}=0$,
+\begin{align}
+\vb{A}(\vb{r})=\frac{\mu_0}{4\pi}\int \frac{\vb{J}(\vb{r}')}{r}\ dV'
+\label{}
+\end{align}
+•
