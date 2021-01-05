@@ -8,7 +8,17 @@ Problemas:
 6.3*
 10.1*, 10.8
 
-total termo = 8
+Total termo = 8
+
+
+
+MECÁNICA ESTADÍSTICA
+Libro: Concepts in Thermal Physics, Blundell & Blundell, 2nd Ed.
+
+19.1, 19.3, 19.4
+
+Total stat-mech: 3
+
 
 
 ELECTROMAGNETISMO
@@ -17,6 +27,10 @@ Problemas:
 
 2.31, 2.32
 3.7, 3.8
+
+Total electro: 4
+
+
 
 
 *probablemente me atoré y aún no los acabo
