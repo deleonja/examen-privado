@@ -27,9 +27,9 @@ Problemas:
 
 2.31, 2.32
 3.7, 3.8
-6.12, 6.13
+6.12, 6.13, 6.16
 
-Total electro: 6
+Total electro: 7
 
 
 
