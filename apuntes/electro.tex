@@ -449,4 +449,143 @@ Materiales ferromagnéticos evidencian un comportamiento distinto
 al de otro tipo de materiales. Los ferromagnéticos muestran un comportamiento
 que se conoce como la curva de histéresis. 
 
+\section{Electrodinámica}
+\subsection{Ley de Faraday}
+\begin{itemize}
+\item Un campo magnético que cambia en el tiempo induce un 
+campo eléctrico,
+\begin{align}
+\E=\oint \vb{E}\vdot d\vb{l}&=-\dv{\Phi}{t}\\
+&=-\dv{t}\qty(\int \vb{B}\vdot d\vb{a})\\
+&=-\int \pdv{\vb{B}}{t}\vdot d\vb{a},
+\end{align}
+ahora aplicamos el teorema de Stokes al lado izquierdo de la ecuación
+\begin{align}
+\int _{\mathcal{S}} \qty(\curl{\vb{E}})\vdot d\vb{a}&=
+-\int \pdv{\vb{B}}{t}\vdot d\vb{a}\\
+\therefore \hspace{5mm} \curl{\vb{E}&=-\pdv{\vb{B}}{t}}.
+\end{align}
 
+\item Cuando sea y por cualquier razón que un flujo de campo 
+magnético cambie a través de una espira, una fem
+\begin{align}
+\E = -\dv{\Phi}{t}
+\end{align}
+aparecerá en la espira.	
+
+\item \textbf{Ley de Lenz:} La naturaleza se opone al cambio del 
+flujo de campo magnético.
+\end{itemize}
+
+\subsection{Energía en los campos magnéticos}
+El trabajo realizado por una carga unitaria, en contra de una fem, 
+en una vuelta alrededor del circuito es $-\E$. La cantidad de carga
+que fluye por el cable por unidad de tiempo es $I$. Entonces 
+la tasa de trabajo por unidad de tiempo es
+\begin{align}
+\dv{W}{t}=-\E I=LI \dv{I}{t}.
+\end{align}
+Ahora, existe una forma más general de escribir esta expresión. 
+Recordamos que el flujo $\Phi$ a través de una espira es igual 
+a $LI$. Por otro lado, 
+\begin{align}
+\Phi = \int \vb{B}\vdot d\vb{a}&=\int \qty(\curl{\vb{A}})\vdot d\vb{a}
+=\oint \vb{A}\vdot d\vb{l},\\
+LI&=\oint \vb{A}\vdot d\vb{l}.
+\end{align}
+Por consiguiente,
+\begin{align}
+W=\frac{1}{2}I\oint \vb{A}\vdot d\vb{l}=
+\frac{1}{2}\oint \qty(\vb{A}\vdot \vb{I})\ dl.
+\end{align}
+De esta forma, 
+\begin{align}
+W=\frac{1}{2}\int \qty(\vb{A}\vdot \vb{J})\ dV,
+\end{align}
+ahora usando la ley de Ampère
+\begin{align}
+W=\frac{1}{2\mu_0}\int \vb{A}\vdot \qty(\curl{\vb{B}})\ dV
+\end{align}
+usando la regla 6 (Griffiths) de la regla del producto
+\begin{align}
+W=\frac{1}{2\mu_0}\qty[\int B^2\ dV-\int \div{\qty(\vb{A}\cp\vb{B})}\ dV],
+\end{align}
+donde explícitamente se utilizó también que $\curl{\vb{A}}=\vb{B}$.
+Ahora para resolver la integral usamos el viejo truco de integrar sobre todo 
+el espacio para que la contribución de la segunda integral sea igual a cero,
+y así llegamos a que la energía almacenada en el campo magnético 
+es igual a 
+\begin{align}
+W=\frac{1}{2\mu_0} \int B^2\ dV.
+\end{align}
+
+Ahora que tenemos 4 leyes del electromagnetismo probemos lo siguiente:
+\begin{align}
+\div{\qty(\curl{\vb{E}})}=\div{\qty(-\pdv{\vb{B}}{t})}=
+-\pdv{t}\qty(\div{B}),
+\end{align}
+todo bien porque ambos lados son iguales a cero. Pero ahora cuando 
+lo intentamos para el campo magnético estamos en problemas
+\begin{align}
+\div{\qty(\curl{\vb{B}})}=\mu_0\qty(\div{\vb{J}}),
+\end{align}
+el caso es que el lado derecho de la ecuación, la ecuación de continuidad,
+es sólo válida para corrientes estacionarias. \textbf{Hay que arreglar 
+la ley de Ampère.} Para arreglarla utilizamos la ecuación de continuidad:
+\begin{align}
+\div{\vb{J}}=-\pdv{\rho}{t}&=-\pdv{t}\qty(\ep \div{\vb{E}})=
+-\div{\qty(\ep \pdv{\vb{E}}{t})}\\
+\hspace{5mm} \div{\qty(\vb{J}+\ep \pdv{\vb{E}}{t})}&=0,
+\end{align}
+este resultado entonces nos sugiere que la modificación a la ley 
+de Ampère es $\vb{J}\to \qty(\vb{J}+\ep \pdv{\vb{E}}{t})$,
+\begin{align}
+\curl{\vb{B}}=\mu_0\vb{J}+\mu_0\ep \pdv{\vb{E}}{t}.
+\end{align}
+Lo bello de este resultado es que nos dice que así como un campo
+magnético que cambia en el tiempo induce un campo eléctrico, un 
+campo eléctrico que cambia en el tiempo induce un campo magnético.
+Esta corrección fue hecha por Maxwell y el nuevo término se conoce 
+como la corriente de desplazamiento,
+\begin{align}
+\vb{J}_d=\ep \pdv{\vb{E}}{t}.
+\end{align}
+Así, entonces tenemos las cuatro ecuaciones del electromagnetismo
+(ecuaciones de Maxwell):
+\begin{align}
+\div{\vb{E}}&=\frac{1}{\ep} & \curl{\vb{E}}&=-\pdv{\vb{B}}{t}\nonumber\\
+\div{\vb{B}}&=0 & \curl{\vb{B}}&=\mu_0\vb{J}+\mu_0\ep \pdv{\vb{E}}{t}.
+\end{align}
+
+\subsection{Corrección de Maxwell a la ley de Ampère}
+\begin{itemize}
+\item \textbf{Motivación física:} cable por el cual fluye corriente y que
+se corta en donde se encuentran dos planos conductores. Se toma un 
+contorno que encierra a la corriente, pero se consideran dos superficies
+distintas. 
+
+\item \textbf{Arreglo:} tomar la divergencia del rotacional 
+de los campos eléctrico y magnético y arreglarlo para que se siga 
+cumpliendo la ecuación de continuidad.
+\end{itemize}
+
+\subsection{Energía del campo electromagnético}
+Tomar el producto punto de $\vb{H}$ con el rotacional de $\vb{E}$,
+el producto punto de $\vb{E}$ con el rotacional de $\vb{H}$ y 
+restar ambas ecuaciones, integrar sobre un volumen y hacer álgebra 
+hasta llegar a la conservación local de la energía.
+
+\subsection{Ecuación de onda}
+Tomar el rotacional de los rotacionales de $\vb{H}$ y de $\vb{E}$. 
+
+\subsection{Ondas monocromáticas}
+Sólo es necesario resolver para el campo eléctrico $\vb{E}$ porque
+luego las ecuaciones de Maxwell relacionan a esa cantidad con $\vb{H}$.
+Dada la condición de ondas monocromáticas se puede tomar 
+\begin{align}
+\vb{E}(\vb{r},t)=\vb{E}(r)e^{-i\omega t}.
+\end{align}
+Con esto se llega a la ecuación del OAS, cuya solución general es 
+\begin{align}
+\vb{E}=\vb{E}_0e^{\pm i\kappa z}.
+\end{align}
