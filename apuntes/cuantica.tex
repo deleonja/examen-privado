@@ -1,0 +1,46 @@
+\chapter{Mecánica Cuántica}
+
+\section{Herramientas elementales}
+\begin{enumerate}
+	\item \textbf{Ecuación de Schrödinger:}
+	\begin{align*}
+		i\hbar \pdv{\ket{\psi}}{t}=H\ket{\psi}
+	\end{align*}
+	
+	\item Un conjunto
+	se dice que es un conjunto completo de observables que conmutan si existe
+	una única base ortonormal común de eigevectores.
+	
+	\item \textbf{Postulados:}
+	\begin{itemize}
+	\item Los estados de un sistema aislado se describen por vectores en 
+	un espacio de Hilbert.
+	\item Cada cantidad física tiene asociado un operador Hermítico que la describe
+	y que actúa sobre el espacio de Hilbert del sistema. 
+	\item El único posible valor de la medición de un observable son sus 
+	eigenvalores. 
+	\item Cuando un observable se mide sobre un sistema, la probabilidad
+	de medir un eigenvalor u otro es igual al módulo cuadrado de la proyección
+	del estado del sistema sobre el eigenvector correspondiente al eigenvalor que 
+	resulta de la medición. Si el eigenvalor medido es degenerado, entonces 
+	la probabilidad es igual a la suma del módulo cuadrado de las proyecciones 
+	del estado del sistema sobre cada uno de los vectores de la base del 
+	subespacio propio asociado al eigenvalor degenerado. 
+	\item Luego de una medición, el sistema se encuentra en la proyección 
+	del estado previo a la medición sobre el subespacio propio asociado 
+	con el eigenvalor resultado de la medición. 
+	\item La evolución del estado de un sistema está determinado 
+	por la ecuación de Schrödinger. 
+	\end{itemize}
+	
+	\item Dos observables se dice que no conmutan cuando sus operadores 
+	Hermíticos asociados no conmutan, lo cual implica físicamente que no 
+	se pueden medir simultáneamente. Dicho de otro modo, el orden de la 
+	medición importa. 
+	
+	\item \textbf{Cuando el Hamiltoniano del sistema es independiente 
+	del tiempo:} el estado del sistema para $t>t_0$ es 
+	\begin{align}
+	\ket{\psi(t)}=\sum_{n,i}\braket{\phi_n^i}{\psi(0)}e^{-iE_nt/\hbar}\ket{\phi_n^i}
+	\end{align}
+\end{enumerate}   

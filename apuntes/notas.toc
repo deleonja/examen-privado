@@ -1,0 +1,51 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Termodinámica}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Trabajo}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}1era ley de la Termodinámica}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Gas ideal}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}La 2da. ley de la Termodinámica}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Ciclo de Carnot}{9}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Entropía}{10}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Métodos matemáticos}{12}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Relaciones de Maxwell}{14}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Ecuaciones $TdS$}{15}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Ecuaciones de la energía interna}{15}{subsection.1.7.3}%
+\contentsline {chapter}{\numberline {2}Mecánica Estadística}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fundamentos estadísticos de la Termodinámica}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Elementos de la teoría de los ensambles}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Osciladores armónicos}{21}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Gran función de partición}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Potencial químico}{22}{subsection.2.3.1}%
+\contentsline {chapter}{\numberline {3}Electromagnetismo}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Electrostática}{23}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Campo eléctrico y ley de Gauss}{23}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Potencial eléctrico}{25}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Trabajo y energía}{26}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Potenciales}{27}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}El método de imágenes}{27}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Desplazamiento eléctrico}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Dieléctricos lineales}{28}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Magnetostática}{28}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Ley de Biot-Savart}{28}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Vector potencial magnético}{29}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Condiciones de frontera}{30}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}El campo auxiliar $\vb {H}$}{30}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Condiciones de frontera}{31}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Medio lineal}{31}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Medios no lineales}{31}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Electrodinámica}{31}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Ley de Faraday}{31}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Energía en los campos magnéticos}{32}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Corrección de Maxwell a la ley de Ampère}{33}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Energía del campo electromagnético}{34}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}Ecuación de onda}{34}{subsection.3.8.5}%
+\contentsline {subsection}{\numberline {3.8.6}Ondas monocromáticas}{34}{subsection.3.8.6}%
+\contentsline {subsection}{\numberline {3.8.7}Condiciones de frontera}{34}{subsection.3.8.7}%
+\contentsline {subsection}{\numberline {3.8.8}Potenciales retardados}{36}{subsection.3.8.8}%
+\contentsline {section}{\numberline {3.9}Propagación de las ondas electromagnéticas}{37}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Mecánica Clásica}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Formulación Lagrangiana}{38}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Mecánica Cuántica}{40}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Herramientas elementales}{40}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Física General}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Materia Condensada}{41}{section.6.1}%

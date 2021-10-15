@@ -1,0 +1,70 @@
+\chapter{Mecánica Clásica}
+
+\section{Formulación Lagrangiana}
+Se define al lagrangiano $\L$ como 
+\begin{align}
+\L = T-U
+\label{eq:lagrangian},
+\end{align}
+donde $T$ es la energía cinética y $U$ la energía potencia del sistema.
+¿Por qué considerar a $\L$ si no es igual a la energía total?
+Bueno, porque
+\begin{align}
+\pdv{\L}{x}=-\pdv{U}{x}&=F_x &
+\pdv{\L}{\dot{x}}=\pdv{T}{\dot{x}}=m\dot{x	}&=p_x.
+\end{align}
+Donde hemos asumido que $U$ es función de las coordenadas y 
+$T$ es función de las velocidades. Notemos que 
+\begin{align}
+\pdv{\L}{x}=\dv{t}\pdv{\L}{\dot{x}}.
+\label{eq:lagrange-eq}
+\end{align}
+Si consideramos una partícula en 3 dimensiones las ecuaciones 
+resultan exactamente análogas para cada una de las coordenadas 
+rectangulares.
+
+\textbf{Principio de Hamilton}: La trayectoria que sigue una partícula 
+entre dos puntos 1 y 2 en un intervalo $t_1$ y $t_2$ es tal 
+que la integral de acción 
+\begin{align}
+S=\int_{t_1}^{t_2} \L \ \d t,
+\end{align}
+es estacionaria cuando se integra a lo largo de la trayectoria que sigue 
+la partícula. 
+
+Tres cosas son equivalentes en este punto. La trayectoria de una partícula
+está determinada por 
+\begin{enumerate}
+\item $\vb{F}=m\vb{a}$
+\item El lagrangiano $\L$, mediante la ecuación \eqref{eq:lagrange-eq}
+\item El principio de Hamilton
+\end{enumerate}
+
+\textbf{Coordenadas generalizadas:} coordenadas $q_i$ con la propiedad
+de que cada posición $\vb{r}$ especifica a un único valor de $(q_i)$ y 
+viceversa.
+
+El lagrangiano es una función que depende de las coordenadas 
+generalizadas y la primera derivada temporal de estas coordenadas. Es 
+decir, 
+\begin{align}
+\L = \L \qty(q_i,\dot{q}_i).
+\end{align}
+Derivado de esto, se conoce como \textit{fuerza generalizada} a 
+$\partial \L /\partial q_i$ y el momentum generalizado a 
+$\partial \L /\partial \dot{q}_i$.
+
+\textbf{Grados de libertad:} Si las coordenadas generalizadas de un 
+sistema están restringidas, como el caso de un péndulo simple, entonces
+el número de coordenadas generalizadas es menor a $3N$ donde $N$ es
+el número de partículas en el sistema. A este número de coordenadas
+generalizadas se le conoce como grados de libertad.
+
+\begin{itemize}
+\item \textbf{Coordenadas ignorables o ciclicas:} se dice que $q_i$ es 
+una coordenada ignorable cuando el lagrangiano $\L$ es independiente
+de $q_i$ (pero sí puede depender de $\dot{q}_i$). Cuando $q_i$ es 
+una coordenada ignorable se dice que $\L$ es invariante cuando 
+$q_i$ varía, lo que implica que el momentum generalizado $p_i$ se 
+conserva.
+\end{itemize}

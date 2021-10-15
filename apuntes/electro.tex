@@ -589,3 +589,182 @@ Con esto se llega a la ecuación del OAS, cuya solución general es
 \begin{align}
 \vb{E}=\vb{E}_0e^{\pm i\kappa z}.
 \end{align}
+
+\subsection{Condiciones de frontera}
+Aplicamos $\div{\vb{B}}=0$ a una situación como la de la 
+\Fref{fig:boundary-cond-B} y tenemos 
+\begin{align}
+\int \div{\vb{B}}\ dV = \oint \vb{B}\vdot d\vb{a}=
+\int _{S_1}\vb{B}\vdot \uv{n}_1 da +
+\int _{S_2}\vb{B}\vdot \uv{n}_2 da + 
+\int _{S_3}\vb{B}\vdot \uv{n}_3 da ,
+\end{align}
+donde $\uv{n}_3$ es un vector normal unitario perpendicular a 
+la orilla de la caja de pastillas. Si hacemos que $h\to 0$ la última 
+integral tiende a cero y se concluye que 
+\begin{align}
+B_{1n} = B_{2n}.
+\end{align}
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{images/boundary-cond-B.png}
+  \caption{Caja de pastillas para una superficie en la interfaz entre dos 
+  medios.}
+  \label{fig:boundary-cond-B}
+\end{figure}
+
+Para la componente paralela del campo eléctrico $\vb{E}$:
+\begin{align}
+\int _S\curl{\vb{E}}\vdot \uv{n} da=
+-\int_S \pdv{\vb{B}}{t}\vdot \uv{n}da,
+\end{align}
+y aplicando el teorema de Stokes al lado izquierdo de la ecuación:
+\begin{align}
+\int _S\qty(\curl{\vb{E}})\vdot \uv{n}\ da=
+\oint_C \vb{E}\vdot d\vb{l} =
+E_1^{\parallel}l-E_2^{\parallel}l+E_2^{\perp}h_2
++E_1^{\perp}h_1-E_1^{\perp}h_1-E_2^{\perp}h_,2
+\end{align}
+pero haciendo que $h_1,h_2\to 0$ y dado que el término 
+$\partial \vb{B}/\partial t$ está acotado, entonces 
+\begin{align}
+E_1^{\parallel}=E_2^{\parallel},
+\end{align}
+la componente paralela a la frontera entre los dos medios del campo
+eléctrico $\vb{E}$ es continuo. 
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{images/boundary-cond-E-parallel.png}
+  \caption{Trayectoria rectangular en la frontera entre dos medios.}
+  \label{fig:boundary-cond-E-parallel}
+\end{figure}
+
+Para la componente perpendicular a la interfaz:
+\begin{align}
+\int_V\div{\vb{D}}\ dV &= \int_V\rho\ dV\\
+\oint_S\vb{D}\vdot \uv{n}\ da &= \sigma A\\
+D_{1n}-D_{2n}&=\sigma, \label{eq:almost-bound-En}
+\end{align}
+considerando que $h\to0$.
+
+Si ahora consideramos que la carga se debe de conservar también en la
+frontera entre dos medios
+\begin{align}
+\int_V\div{\vb{J}}\ dV &= -\int_V\pdv{\rho}{t}\ dV\\
+\oint_S\vb{J}\vdot \uv{n}\ da &= -\pdv{\sigma}{t} A\\
+J_{1n}-J_{2n}&=-\pdv{\sigma}{t},
+\end{align}
+y ahora considerando ondas monocromáticas y que los 
+medios son lineales. Estas suposiciones nos permiten asumir que 
+la densidad superficial de la carga en la frontera se comporta como
+$\sigma=\sigma e^{-i\omega t}$. Por lo tanto,
+\begin{align}
+\epsilon_1E_{1n}-\epsilon_2E_{2n}=i\omega \sigma.
+\end{align}
+Entonces se tienen las dos ecuaciones de frontera para la componente
+perpendicular del campo eléctrico a la frontera entre dos medios:
+\begin{align}
+\epsilon_1 E	_{1n}-\epsilon_2E_{2n}&=\sigma.
+\end{align}
+
+Por último, para la componente paralela a la interfaz entre dos medios
+del campo magnético:
+\begin{align}
+\int_S \qty(\curl{\vb{H}})\vdot \uv{n}\ da &= 
+\int_S \qty(\pdv{\vb{D}}{t}+\vb{J})\vdot \uv{n}\ da\\
+\oint \vb{H}\vdot d\vb{l} &= J_n A, \\
+\qty(H_{1t}-H_{2t})l&=J_nA=j_{n}l\\
+H_{1t}-H_{2t}&=j_{n}
+\end{align}
+considerando que $\partial \vb{D}/\partial t$ está acotado y que 
+$j_n$ es la densidad superficial de corriente perpendicular 
+a la dirección de $\vb{H}$.
+
+\subsection{Potenciales retardados}
+Vamos a considerar que existen distribuciones de carga y corriente 
+$\rho(\vb{r},t)$ y $\vb{J}(\vb{r},t)$ y encontrar los campos que 
+producen.
+
+Partimos de que el campo magnético se puede escribir a partir 
+de una función de potencial vectorial:
+\begin{align}
+\vb{B}=\curl{\vb{A}}. \label{eq:B_retard-pot}
+\end{align}
+Ahora utilizamos esta expresión en la ecuación de la ley de Faraday,
+\begin{align}
+\curl{\vb{E}}+\pdv{t}\curl{\vb{A}}&=0 \\
+\curl{\qty(\vb{E}+\pdv{\vb{A}}{t})}&=0.
+\end{align}
+De aquí se deduce que el vector $\qty(\vb{E}+\partial \vb{A}/\partial t)$,
+por tener rotacional igual a cero, puede ser escrito como el 
+gradiente de una función escalar:
+\begin{align}
+\vb{E}+\pdv{\vb{A}}{t}=-\grad{\varphi} \\
+\vb{E}=-\grad{\varphi}-\pdv{\vb{A}}{t} \label{eq:E_retard-pot}
+\end{align}
+En este punto notemos que las ecuaciones \eqref{eq:B_retard-pot} y
+\eqref{eq:B_retard-pot} proporcionan expresiones para calcular el 
+campo eléctrico y magnético de una onda electromagnética a partir 
+de los potenciales $\vb{A}$ y $\varphi$.
+\begin{align}
+\frac{1}{\mu}\curl{\curl{\vb{A}}}-
+\epsilon\pdv{t}\qty(-\grad{\varphi}-\pdv{\vb{A}}{t})=\vb{J},
+\end{align}
+recordando que $\vb{H}=(1/\mu)\vb{B}$ y $\vb{D}=\epsilon\vb{E}$.
+\begin{align}
+\frac{1}{\mu}\qty(\grad{\qty(\div{\vb{A}})}-\grad^2\vb{A})-
+\epsilon\pdv{t}\qty(-\grad{\varphi}-\pdv{\vb{A}}{t})&=\vb{J}\\
+-\grad^2\vb{A}+\mu\epsilon\pdv[2]{\vb{A}}{t}+
+\grad{\qty(\div{\vb{A}})}+\mu\epsilon\grad{\pdv{\varphi}{r}}&=\mu\vb{J},
+\label{eq:almost-eq-for-A}
+\end{align}
+ahora decidimos imponer la condición de Lorentz:
+\begin{align}
+\div{\vb{A}}+\mu\epsilon\pdv{\varphi}{t}=0.
+\end{align}
+Si esta condición se satisface entonces la ecuación \eqref{eq:almost-eq-for-A}
+se vuelve
+\begin{align}
+-\grad^2\vb{A}+\mu\epsilon\pdv[2]{\vb{A}}{t}&=\mu\vb{J}
+\end{align}
+Por otro lado, utilizando la expresión para $\vb{E}$ en la expresión 
+\eqref{eq:E_retard-pot}
+\begin{align}
+\epsilon\div{\qty(-\grad{\varphi}-\pdv{\vb{A}}{t})}&=\rho\\
+-\epsilon\qty[\div{\grad{\varphi}}+\div{\pdv{A}{t}}]=\rho\\
+-\epsilon\qty[\div{\grad{\varphi}}+\pdv{t}\div{A}]=\rho
+\end{align}
+y ahora usamos la condición de Lorentz
+\begin{align}
+-\epsilon\qty[\div{\grad{\varphi}}-\mu\epsilon\pdv{\varphi}{t}]&=\rho\\
+\grad^2\varphi-\mu\epsilon\pdv{\varphi}{t}&=-\frac{1}{\epsilon}\rho.
+\end{align}
+Así, hemos obtenido ecuaciones diferenciales inhomogéneas
+para $\vb{A}$ y $\varphi$ que son similares. Al resolver 
+las ecuaciones diferenciales se encuentran los \textbf{potenciales
+retardados}:
+\begin{align}
+\varphi(\vb{r},t)&=\frac{1}{4\pi	\epsilon_0}\int_V\frac{\rho(\vb{r}',t')}
+{\abs{\vb{r}-\vb{r}'}}\ dV'\\
+\vb{A}(\vb{r},t)&= \frac{\mu_0}{4\pi	}
+\int_V\frac{\vb{J}(\vb{r}',t')}
+{\abs{\vb{r}-\vb{r}'}}\ dV',
+\end{align}
+donde $t'=t-\abs{\vb{r}-\vb{r}'}/c$ es el tiempo de retardo.
+
+Una observación importante de hacer sobre los potenciales retardados 
+es que los potenciales $\varphi$ y $\vb{A}$ en un punto $\vb{r}$ en un 
+tiempo $t$ están determinado por distribuciones de carga y corriente 
+que existieron en $\vb{r}'$ en un tiempo previo $t'$. Nótese también 
+que si la distribución de carga y/o corriente se cambiara, el campo 
+electromagnético en un punto $\vb{r}$ no se modificaría inmediatamente,
+sino la información viajaría desde donde se encuentra la fuente a la velocidad
+de la luz.
+
+\section{Propagación de las ondas electromagnéticas}
+\textbf{Onda plana:} una onda cuya fase es la misma en algún instante
+en cualquiera de los puntos sobre cada plano perpendicular a una 
+dirección específica. 
+
+\textbf{Relación de dispersión transversa:} determina la magnitud 
+del vector de onda $\mathtt{k}$

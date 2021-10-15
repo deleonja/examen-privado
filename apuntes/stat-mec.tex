@@ -248,3 +248,52 @@ y
 U&=\pdv{\ln\mathcal{Z}}{\beta}\nonumber\\
 &=NkT.
 \end{align}
+
+\section{Gran función de partición}
+\subsection{Potencial químico}
+Si se agrega una partícula a un sistema, entonces su energía interna
+cambiará una cantidad que definimos como el \textbf{potencial químico}
+$\mu$. Así que cuando este es el caso la primera y segunda ley de la
+termodinámica se deben de modificar, agregando un término extra:
+\begin{align}
+\d U=T\d S-P\d V+\mu \d N,
+\label{eq:dU-with-mu}
+\end{align}
+donde $N$ es el número de partículas del sistema. Esto inmediatamente 
+implica que podemos escribir 
+\begin{align}
+\mu=\qty(\pdv{U}{N})_{S,V}.
+\end{align}
+Recordemos que la energía libre de Helmholtz se define como 
+$A=U-TS$ y la energía libre de Gibbs como $G=U-PV-TS$, por consiguiente
+\begin{align}
+\d F&=-P\d V -S\d T+\mu \d N\\
+\d G&=V\d P-S\d T+\mu\d N,
+\end{align}
+con lo cual se tiene 
+\begin{align}
+\mu &=\qty(\pdv{F}{N})_{V,T}\\
+\mu &=\qty(\pdv{G}{N})_{P,T},
+\end{align}
+de manera que esta última expresión para $\mu$ en términos de la energía
+libre de Gibbs se volverá particularmente útil dado que mantener las variables 
+$P$ y $T$ constantes es algo viable en el experimento.
+
+Podemos considerar que la función de entropía es $S=S(U,V,N)$,
+de tal forma que 
+\begin{align}
+\d S=\qty(\pdv{S}{U})_{N,V}\d U+
+\qty(\pdv{S}{V})_{N,U}\d V+
+\qty(\pdv{S}{N})_{U,V}\d N.
+\end{align}
+Si dividimos la ecuación \eqref{eq:dU-with-mu} dentro de $T$ y 
+despejamos para $\d S$ se tiene
+\begin{align}
+\d S=\frac{\d U}{T}+\frac{P\d V}{T}-\frac{\mu\d N}{T},
+\end{align}
+y al compararlo con la ecuación anterior podemos concluir que 
+\begin{align}
+\qty(\pdv{S}{U})_{N,V}&=\frac{1}{T} &
+\qty(\pdv{S}{V})_{N,U} &=\frac{P}{T} &
+\qty(\pdv{S}{N})_{U,V} &=-\frac{\mu}{T}.	
+\end{align}

@@ -72,7 +72,11 @@
 \newcommand{\W}{\abs{W}}
 \newcommand{\uv}[1]{\vb{\hat{#1}}}
 \newcommand{\ep}{\epsilon_0}
-\renewcommand{\uv}[1]{\ \boldsymbol{\hat{#1}}}
+\renewcommand{\L}{\mathcal{L}}
+
+\renewcommand{\uv}[1]{\boldsymbol{\hat{\mathrm{#1}}}}
+\renewcommand{\d}{\mathrm{d}}
+
 
 \def\dbar{{\mathchar'26\mkern-12mu d}}
 
@@ -111,9 +115,15 @@ Licenciatura en Física}
 \begin{document}
 \maketitle
 
+\tableofcontents
+
+
 \input{termo.tex}
 \input{stat-mec.tex}
 \input{electro.tex}
+\input{classical.tex}
+\input{cuantica.tex}
+\input{general.tex}
 
 
 \bibliographystyle{abbrv}
